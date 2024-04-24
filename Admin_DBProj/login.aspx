@@ -50,13 +50,6 @@
         input[type="submit"]:hover {
             background-color: #b37333;
         }
-        .forgot-password {
-            margin-top: 10px;
-        }
-        .forgot-password a {
-            color: #4d3319;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
@@ -67,9 +60,6 @@
             <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Login">
         </form>
-        <div class="forgot-password">
-            <a href="#">Forgot Password?</a>
-        </div>
     </div>
 </body>
 </html>

@@ -12,6 +12,9 @@
             margin: 0;
             padding: 0;
         }
+        .logout {
+            text-align: center;
+        }
         .container {
             display: flex;
             height: 100vh;
@@ -62,18 +65,28 @@
             border-radius: 5px;
             padding: 20px;
         }
+        .logout {
+            margin-top: 80px;
+        }
+        .logout a img {
+            width: 35px; /* Set width of logout image */
+            height: 35px; /* Set height of logout image */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li><a href="#"><img src="Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
+                <li><a href="home.aspx"><img src="Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
                 <li><a href="#"><img src="Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
-                <li><a href="#"><img src="Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
-                <li><a href="#"><img src="Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
+                <li><a href="customer.aspx"><img src="Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
+                <li><a href="products.aspx"><img src="Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
                 <li><a href="#"><img src="Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
             </ul>
+            <div class="logout">
+                <a href="login.aspx"><img src="Images/icons8-logout-52.png" /></a>
+            </div>
         </div>
         <div class="content">
             <div class="header">

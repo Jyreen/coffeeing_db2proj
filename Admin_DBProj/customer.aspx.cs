@@ -7,13 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Admin_DBProj
 {
-    public partial class login : System.Web.UI.Page
+    public partial class customer : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-
     }
 }
