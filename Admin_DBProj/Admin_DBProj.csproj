@@ -102,7 +102,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="About.aspx" />
+    <Content Include="cart.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -122,6 +124,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="customer.aspx" />
+    <Content Include="customerhomepage.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -135,7 +138,9 @@
     <Content Include="Images\icons8-logout-64.png" />
     <Content Include="Images\icons8-person-64.png" />
     <Content Include="login.aspx" />
+    <Content Include="logincustomer.aspx" />
     <Content Include="products.aspx" />
+    <Content Include="productscustomer.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -244,6 +249,12 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logincustomer.aspx.cs">
+      <DependentUpon>logincustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logincustomer.aspx.designer.cs">
+      <DependentUpon>logincustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="products.aspx.cs">
       <DependentUpon>products.aspx</DependentUpon>

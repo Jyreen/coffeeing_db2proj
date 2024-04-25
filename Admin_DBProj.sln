@@ -5,6 +5,16 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin_DBProj", "Admin_DBProj\Admin_DBProj.csproj", "{B4C139F7-83C4-45DD-AD40-A64A266C9158}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Customer_DBProj", "Customer_DBProj", "{11F6D3AA-B449-490B-B9E5-95CAAAFB97F4}"
+	ProjectSection(SolutionItems) = preProject
+		Admin_DBProj\cart.aspx = Admin_DBProj\cart.aspx
+		Admin_DBProj\customerhomepage.aspx = Admin_DBProj\customerhomepage.aspx
+		Admin_DBProj\logincustomer.aspx = Admin_DBProj\logincustomer.aspx
+		Admin_DBProj\logincustomer.aspx.cs = Admin_DBProj\logincustomer.aspx.cs
+		Admin_DBProj\logincustomer.aspx.designer.cs = Admin_DBProj\logincustomer.aspx.designer.cs
+		Admin_DBProj\productscustomer.aspx = Admin_DBProj\productscustomer.aspx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

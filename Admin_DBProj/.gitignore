@@ -1,0 +1,12 @@
+{
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+    .vs/Admin_DBProj/FileContentIndex/65ad0b63-6039-4625-ad61-141518c6a557.vsidx
+
+  ]
+}
