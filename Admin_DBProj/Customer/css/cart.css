@@ -1,0 +1,496 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #C2A375;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+$color-border: #eee; $color-label: #aaa; $font-default: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; $font-bold: 'HelveticaNeue-Medium', 'Helvetica Neue Medium'; .product-image {
+    width: 100px; /* Set a fixed width for the images */
+    margin-right: 10px; /* Add some margin between the images and other elements */
+}
+
+.product-details {
+    float: left;
+    width: calc(37% - 110px); /* Adjust the width to accommodate the image width and margin */
+}
+
+.product-price {
+    float: left;
+    width: 12%;
+}
+
+.product-quantity {
+    float: left;
+    width: 10%;
+}
+
+.product-removal {
+    float: left;
+    width: 9%;
+}
+
+.product-line-price {
+    float: left;
+    width: 12%;
+    text-align: right;
+}
+
+/* This is used as the traditional .clearfix class */
+.group:before,
+.group:after {
+    content: '';
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+}
+
+
+/* Apply clearfix in a few places */
+.shopping-cart, .column-labels, .product, .totals-item {
+    @extend .group;
+}
+
+
+/* Apply dollar signs */
+.product .product-price:before, .product .product-line-price:before, .totals-value:before {
+    content: '$';
+}
+
+
+/* Body/Header stuff */
+body {
+    padding: 0px 30px 30px 20px;
+    font-family: $font-default;
+    font-weight: 100;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+label {
+    color: $color-label;
+}
+
+.shopping-cart {
+    margin-top: 70px;
+}
+
+
+
+/* Column headers */
+.column-labels label {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $color-border;
+}
+
+.product-image, .product-details, .product-removal {
+    text-indent: -9999px;
+}
+
+/* Product entries */
+.product .product-image img {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-border;
+    text-align: center;
+    width: 100px;
+}
+
+.product-details .product-title {
+    margin-right: 20px;
+    font-family: $font-bold;
+}
+
+.product-description {
+    margin: 5px 20px 5px 0;
+    line-height: 1.4em;
+}
+
+.product-quantity input {
+    width: 40px;
+}
+
+.remove-product {
+    border: 0;
+    padding: 4px 8px;
+    background-color: #c66;
+    color: #fff;
+    font-family: $font-bold;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.remove-product:hover {
+    background-color: #a44;
+}
+
+/* Totals section */
+.totals {
+    float: right;
+    clear: both;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.totals-item label {
+    float: left;
+    clear: both;
+    width: 79%;
+    text-align: right;
+}
+
+.totals-value {
+    float: right;
+    width: 21%;
+    text-align: right;
+}
+
+.totals-item-total {
+    font-family: $font-bold;
+}
+
+
+.checkout {
+    float: right;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #3c2a04; 
+    color: #fff;
+    font-size: 18px;
+    border-radius: 9px;
+}
+
+.checkout:hover {
+    background-color: #e6bb00;
+}
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+    .shopping-cart {
+        margin: 0;
+        padding-top: 20px;
+        border-top: 1px solid $color-border;
+    }
+
+    .column-labels {
+        display: none;
+    }
+
+    .product-image img {
+        float: right;
+        width: auto;
+        margin: 0 0 10px 10px;
+    }
+
+    .product-details {
+        float: none;
+        margin-bottom: 10px;
+        width: auto;
+    }
+
+    .product-price {
+        clear: both;
+        width: 70px;
+    }
+
+    .product-quantity input {
+        width: 100px;
+        margin-left: 20px;
+    }
+
+    .product-quantity:before {
+        content: 'x';
+    }
+
+    .product-removal {
+        width: auto;
+    }
+
+    .product-line-price {
+        float: right;
+        width: 70px;
+    }
+}
+
+
+
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+
+    .product-removal {
+        float: right;
+    }
+
+    .product-line-price {
+        float: right;
+        clear: left;
+        width: auto;
+        margin-top: 10px;
+    }
+
+    .product .product-line-price:before {
+        content: 'Item Total: $';
+    }
+
+    .totals .totals-item label {
+        width: 60%;
+    }
+
+    .totals-value {
+        width: 40%;
+    }
+}
+
+/* Taskbar Styles */
+.taskbar {
+    margin-bottom: 20px;
+}
+
+.taskbar button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #fe302f;
+    color: #fff;
+    cursor: pointer;
+}
+
+.taskbar button:hover {
+    background-color: #d63029;
+}
+
+header {
+    background-color: #C2A375;
+    padding: 5px 15px;
+    color: #fff;
+    display: flex;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+    border-bottom: 2px solid #000;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.header h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+/* Logo styles */
+.logo {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.logo a:hover {
+    color: #fff;
+}
+
+.logo img {
+    width: 40px;
+    /* Adjust the size of the image */
+    margin-right: 10px;
+    /* Add some space between image and text */
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px; /* Adjust font size */
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+
+.auto-style1 {
+    max-width: 1900px;
+    margin: 0 auto;
+    /* Centering the content horizontally */
+    /* You can optionally add padding or margin if needed */
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    text-align: left;
+    /* Align text to the left */
+    color: #fff;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero img.active {
+    opacity: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    /* Adjusted left position */
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #fff;
+    font-size: 48px;
+    /* Larger font size */
+    max-width: 50%;
+    /* Added maximum width */
+    font-family: 'Pacifico', cursive;
+    /* Creative font style */
+}
+
+/* Product Section Styles */
+.product-section {
+    margin-left: 240px; /* Width of the sidebar + some space */
+    margin-right: 20px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 992px) {
+    .product-section {
+        margin-left: 0;
+    }
+}
+
+.menu-category {
+    margin-bottom: 30px;
+}
+
+.menu-category h2 {
+    font-size: 24px;
+    color: black; /* White text for category headings */
+    margin-bottom: 10px;
+}
+
+.cart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.cart-item:hover {
+    transform: translateY(-5px);
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    grid-column: 1;
+}
+
+.cart-item-details {
+    grid-column: 2 / -1;
+}
+
+.cart-item-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.cart-item-description {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.cart-item-price {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.quantity-and-remove {
+    grid-column: 4;
+    display: flex;
+    align-items: center;
+}
+
+.quantity-input {
+    width: 50px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.remove-from-cart-button {
+    background-color: #3c2a04;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.remove-from-cart-button:hover {
+    background-color: #bd3426;
+}

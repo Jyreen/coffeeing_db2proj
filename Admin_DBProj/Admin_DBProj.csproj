@@ -104,8 +104,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="About.aspx" />
-    <Content Include="cart.aspx" />
-    <Content Include="checkout.aspx" />
+    <Content Include="Customer\checkout.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -125,11 +124,24 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="customer.aspx" />
-    <Content Include="customerhomepage.aspx" />
+    <Content Include="Customer\css\cart.css" />
+    <Content Include="Customer\css\home.css" />
+    <Content Include="Customer\css\prod.css" />
+    <Content Include="Customer\css\style.css" />
+    <Content Include="Customer\Customer_Cart.aspx" />
+    <Content Include="Customer\Customer_Checkout.aspx" />
+    <Content Include="Customer\Customer_Homepage.aspx" />
+    <Content Include="Customer\Customer_Products.aspx" />
+    <Content Include="Customer\js\cart.js" />
+    <Content Include="Customer\js\main.js" />
+    <Content Include="Customer\Login\Customer_Login.aspx" />
+    <Content Include="Customer\Register\Customer_Register.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="home.aspx" />
+    <Content Include="Images\Beans.png" />
+    <Content Include="Images\beans2.png" />
     <Content Include="Images\icons8-analytics-60.png" />
     <Content Include="Images\icons8-cardboard-box-50.png" />
     <Content Include="Images\icons8-cart-48.png" />
@@ -140,9 +152,7 @@
     <Content Include="Images\icons8-person-64.png" />
     <Content Include="Images\—Pngtree—real shot coffee raw coffee_4416894.png" />
     <Content Include="login.aspx" />
-    <Content Include="logincustomer.aspx" />
     <Content Include="products.aspx" />
-    <Content Include="productscustomer.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -228,6 +238,48 @@
     <Compile Include="customer.aspx.designer.cs">
       <DependentUpon>customer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\Customer_Cart.aspx.cs">
+      <DependentUpon>Customer_Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Customer_Cart.aspx.designer.cs">
+      <DependentUpon>Customer_Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Customer_Checkout.aspx.cs">
+      <DependentUpon>Customer_Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Customer_Checkout.aspx.designer.cs">
+      <DependentUpon>Customer_Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Customer_Homepage.aspx.cs">
+      <DependentUpon>Customer_Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Customer_Homepage.aspx.designer.cs">
+      <DependentUpon>Customer_Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Customer_Products.aspx.cs">
+      <DependentUpon>Customer_Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Customer_Products.aspx.designer.cs">
+      <DependentUpon>Customer_Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Login\Customer_Login.aspx.cs">
+      <DependentUpon>Customer_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Login\Customer_Login.aspx.designer.cs">
+      <DependentUpon>Customer_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Register\Customer_Register.aspx.cs">
+      <DependentUpon>Customer_Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Register\Customer_Register.aspx.designer.cs">
+      <DependentUpon>Customer_Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -251,12 +303,6 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="logincustomer.aspx.cs">
-      <DependentUpon>logincustomer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="logincustomer.aspx.designer.cs">
-      <DependentUpon>logincustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="products.aspx.cs">
       <DependentUpon>products.aspx</DependentUpon>
@@ -317,7 +363,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52061</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44319/</IISUrl>
+          <IISUrl>http://localhost:50681/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

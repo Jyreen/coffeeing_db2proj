@@ -1,0 +1,104 @@
+﻿body, html {
+    font-family: 'Montserrat', sans-serif; /* Changed font family */
+    background-color: #F8F5EC;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header styles */
+header {
+    background-color: #C2A375;
+    padding: 5px 15px; /* Adjusted padding */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* Reduced height */
+    margin-left: auto;
+}
+
+/* Logo styles */
+.logo {
+    font-family: 'Arial', sans-serif; 
+    font-size: 24px; 
+    text-transform: uppercase; 
+    margin-right: auto; 
+    display: flex; 
+    align-items: center; 
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.logo a:hover {
+    color: #fff;
+}
+
+.logo img {
+    width: 40px; /* Adjust the size of the image */
+    margin-right: 10px; /* Add some space between image and text */
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px; /* Adjust font size */
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    text-align: left; /* Align text to the left */
+    color: #fff;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero img.active {
+    opacity: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #000000;
+    font-size: 48px; 
+    max-width: 50%; 
+    font-family: 'Pacifico', cursive; 
+}
