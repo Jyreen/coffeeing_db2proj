@@ -220,3 +220,27 @@ C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj
 C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.csprojResolveAssemblyReference.cache
 C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.dll
 C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.pdb
+D:\coffeeing_db2proj\Admin_DBProj\bin\Admin_DBProj.dll.config
+D:\coffeeing_db2proj\Admin_DBProj\bin\Admin_DBProj.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\Admin_DBProj.pdb
+D:\coffeeing_db2proj\Admin_DBProj\bin\Antlr3.Runtime.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\AspNet.ScriptManager.jQuery.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\Microsoft.ScriptManager.WebForms.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\Microsoft.Web.Infrastructure.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\Newtonsoft.Json.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\System.Web.Optimization.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\WebGrease.dll
+D:\coffeeing_db2proj\Admin_DBProj\bin\System.Web.Optimization.xml
+D:\coffeeing_db2proj\Admin_DBProj\bin\Newtonsoft.Json.xml
+D:\coffeeing_db2proj\Admin_DBProj\bin\Antlr3.Runtime.pdb
+D:\coffeeing_db2proj\Admin_DBProj\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\coffeeing_db2proj\Admin_DBProj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.csproj.AssemblyReference.cache
+D:\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.csproj.CoreCompileInputs.cache
+D:\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DB.98A433B8.Up2Date
+D:\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.dll
+D:\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.pdb

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Admin_DBProj",
+    "\\Admin_DBProj\\Customer"
   ],
-  "SelectedNode": "\\Admin_DBProj.sln",
+  "SelectedNode": "\\Admin_DBProj\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
