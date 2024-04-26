@@ -10,6 +10,7 @@
 body, html {
 font-family: 'Montserrat', sans-serif; /* Changed font family */
 background-color: #F8F5EC;
+
 margin: 0;
 padding: 0;
 height: 100%;
@@ -31,16 +32,17 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 height: 60px; /* Reduced height */
+margin-left: auto;
 }
 
 /* Logo styles */
 .logo {
-font-family: 'Arial', sans-serif; /* Changed font family */
-font-size: 24px; /* Adjusted font size */
-text-transform: uppercase; /* All caps */
-margin-right: auto; /* Pushes navigation to the right */
-display: flex; /* Added to align image and text */
-align-items: center; /* Added to align image and text */
+font-family: 'Arial', sans-serif; 
+font-size: 24px; 
+text-transform: uppercase; 
+margin-right: auto; 
+display: flex; 
+align-items: center; 
 }
 
 .logo img {
@@ -52,6 +54,7 @@ margin-right: 10px; /* Add some space between image and text */
 nav {
 display: flex;
 align-items: center;
+
 }
 
 nav a {
@@ -98,24 +101,23 @@ opacity: 1;
 .hero-text {
 position: absolute;
 top: 50%;
-left: 20px; /* Adjusted left position */
+left: 20px;
 transform: translateY(-50%);
 z-index: 1;
-color: #fff;
-font-size: 48px; /* Larger font size */
-max-width: 50%; /* Added maximum width */
-font-family: 'Pacifico', cursive; /* Creative font style */
+color: #000000;
+font-size: 48px; 
+max-width: 50%; 
+font-family: 'Pacifico', cursive; 
 }
 
-/* Call to action button styles */
 .cta-button {
-background-color: #3c2a04; /* Custom color */
+background-color: #3c2a04; 
 border: none;
 color: #fff;
-padding: 10px 20px; /* Adjusted padding */
-margin-top: 10px; /* Adjusted margin top */
+padding: 10px 20px; 
+margin-top: 10px;
 text-decoration: none;
-font-size: 18px; /* Adjusted font size */
+font-size: 18px; 
 border-radius: 5px;
 cursor: pointer;
 transition: background-color 0.3s;
@@ -124,7 +126,7 @@ transition: background-color 0.3s;
 
 
 .cta-button:hover {
-background-color: #E4572E; /* Darker shade on hover */
+background-color: #E4572E; 
 }
 </style>
 </head>
@@ -132,19 +134,16 @@ background-color: #E4572E; /* Darker shade on hover */
 <!-- Header -->
 <header>
 <div class="logo">
-<asp:Image ID="Image3" runat="server" CssClass="center" ImageUrl="~/assests/imgs/dino-costume.gif" width="60" height="60" />
-<span style="font-family: 'Arial', sans-serif;">COFFEING</span> <!-- Changed font -->
+<span style="font-family: 'Arial', sans-serif;">COFFEING</span> 
 </div>
 <nav>
-<a href="#"><i class="fas fa-search"></i></a> <!-- Magnifying glass icon -->
-<a href="#"><i class="fas fa-bell"></i></a> <!-- Notification icon -->
+<a href="#"><i class="fas fa-search"></i></a> 
+<a href="#"><i class="fas fa-bell"></i></a> 
 <a href="#">Home</a>
-<a href="about.html">About</a> <!-- Link to the about page -->
-<a href="shop.html">Shop</a> <!-- Link to your shop page -->
-<a href="#">Pages</a>
-<a href="#">Blog</a>
-<a href="login.html">Sign In</a> <!-- Link to your login page -->
-<a href="#" class="cta-button">Contact Us</a> <!-- Orange "Contact Us" button -->
+<a href="about.html">About</a> 
+<a href="productscustomer.aspx">Shop</a> 
+<a href="logincustomer.aspx">Sign In</a> 
+<a href="#" class="cta-button">Contact Us</a> 
 
 
 </nav>
@@ -159,7 +158,7 @@ background-color: #E4572E; /* Darker shade on hover */
 <!-- "Shop Now" button -->
 <a href="productscustomer.aspx" class="cta-button">Shop Now</a> <!-- "Shop Now" button -->
 </div>
-<asp: img class="active" ImageUrl="~/assests/imgs/coffee-beans-with-props-making-coffee.jpg" alt="Coffee Beans with Cup"> <!-- First image -->
+<asp: img class="active" ImageUrl="C:\Users\Timothy Noel Romares\source\repos\coffeeing_db2proj\Admin_DBProj\Images\—Pngtree—real shot coffee raw coffee_4416894.png" alt="Coffee beans"> <!-- First image -->
 <img ImageUrl="~/assests/imgs/espresso-surrounded-by-scattered-coffee-beans-dark-surface.jpg" alt="Coffee Making"> <!-- Second image -->
 <img ImageUrl="~/assests/imgs/coffeeshop.jpg" alt="Espresso"> <!-- Third image -->
 <!-- Add more images for slideshow as needed -->

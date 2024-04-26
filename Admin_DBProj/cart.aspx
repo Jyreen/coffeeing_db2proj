@@ -108,8 +108,9 @@
         }
 
         .shopping-cart {
-            margin-top: 60 px;
-        }
+             margin-top: 70px; 
+         }
+
 
 
         /* Column headers */
@@ -320,32 +321,27 @@
         }
 
         header {
-            background-color: transparent; /* Changed to transparent */
-            padding: 5px 15px; /* Adjusted padding */
+            background-color: transparent; 
+            padding: 5px 15px; 
             color: #fff;
             display: flex;
-            position: fixed; /* Changed to fixed */
-            top: 0; /* Placed at the top of the viewport */
-            width: 100%; /* Full width */
-            z-index: 1000; /* Ensuring it stays on top of other content */
-            height: 60px; /* Set height */
-            border-bottom: 2px solid #000; /* Added border at the bottom */
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000; 
+            height: 60px;
+            border-bottom: 2px solid #000; 
           }
 
         /* Logo styles */
         .logo {
-            font-family: 'Arial', sans-serif;
-            /* Changed font family */
+            font-family: 'Pacifico', sans-serif;
             font-size: 24px;
-            /* Adjusted font size */
             text-transform: uppercase;
-            /* All caps */
             margin-right: auto;
-            /* Pushes navigation to the right */
             display: flex;
-            /* Added to align image and text */
             align-items: center;
-            /* Added to align image and text */
+
         }
 
         .logo img {
@@ -366,7 +362,7 @@
             text-decoration: none;
             margin: 0 10px;
             font-size: 16px;
-            /* Adjust font size */
+            
         }
 
         nav a:hover {
@@ -378,7 +374,7 @@
             color: #fff;
             font-size: 14px;
             margin-left: auto;
-            /* Pushes contact info to the left */
+         
         }
 
         .auto-style1 {
@@ -515,78 +511,79 @@
             }
 
             .cart-grid {
-              width: 80%;
-              margin: 0 auto;
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 20px;
+             }
+               .cart-item {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 15px;
+          background-color: #f0f0f0;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s;
         }
-       .cart-item {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
 
-.cart-item:hover {
-  transform: translateY(-5px);
-}
+        .cart-item:hover {
+          transform: translateY(-5px);
+        }
 
-.cart-item img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 20px;
-  grid-column: 1;
-}
+        .cart-item img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin-right: 20px;
+          grid-column: 1;
+        }
 
-.cart-item-details {
-  grid-column: 2 / -1;
-}
+        .cart-item-details {
+          grid-column: 2 / -1;
+        }
 
-.cart-item-name {
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 5px;
-}
+        .cart-item-name {
+          font-size: 20px;
+          font-weight: bold;
+          color: black;
+          margin-bottom: 5px;
+        }
 
-.cart-item-description {
-  color: black;
-  margin-bottom: 10px;
-}
+        .cart-item-description {
+          color: black;
+          margin-bottom: 10px;
+        }
 
-.cart-item-price {
-  color: #ffd700;
-  font-weight: bold;
-}
+        .cart-item-price {
+          color: #ffd700;
+          font-weight: bold;
+        }
 
-.quantity-and-remove {
-  grid-column: 4;
-  display: flex;
-  align-items: center;
-}
+        .quantity-and-remove {
+          grid-column: 4;
+          display: flex;
+          align-items: center;
+        }
 
-.quantity-input {
-  width: 50px;
-  margin-right: 10px;
-  padding: 5px;
-}
+        .quantity-input {
+          width: 50px;
+          margin-right: 10px;
+          padding: 5px;
+        }
 
-.remove-from-cart-button {
-  background-color: #ffd700;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border-radius: 5px;
-}
+        .remove-from-cart-button {
+          background-color: #ffd700;
+          color: #ffffff;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          border-radius: 5px;
+        }
 
-.remove-from-cart-button:hover {
-  background-color: #e6bb00;
-}
+        .remove-from-cart-button:hover {
+          background-color: #e6bb00;
+        }
 
     </style>
 </head>
@@ -668,7 +665,6 @@
 
     <header class="auto-style1">
         <div class="logo">
-            <asp:Image ID="Image3" runat="server" CssClass="center" Height="100px" ImageUrl="~/assests/imgs/dino-costume.gif" Width="100px" />
             <span style="font-family: 'Arial', sans-serif;">COFFEING</span> <!-- Changed font -->
         </div>
         <nav>
@@ -694,32 +690,33 @@
     </div>
   </div>
   <div class="cart-grid">
-    <!-- Cart items -->
-    <div class="cart-item">
-      <img src="path/to/image1.jpg" alt="Product 1">
-      <div class="cart-item-details">
-        <div class="cart-item-name">Product 1</div>
-        <div class="cart-item-description">Description of Product 1</div>
-        <div class="cart-item-price">$10.99</div>
-      </div>
-      <div class="quantity-and-remove">
-        <input type="number" class="quantity-input" value="1" min="1">
-        <button class="remove-from-cart-button">Remove</button>
-      </div>
+  <!-- Cart items -->
+  <div class="cart-item">
+    <img src="path/to/image1.jpg" alt="Product 1">
+    <div class="cart-item-details">
+      <div class="cart-item-name">Product 1</div>
+      <div class="cart-item-description">Description of Product 1</div>
+      <div class="cart-item-price">$10.99</div>
     </div>
+    <div class="quantity-and-remove">
+      <input type="number" class="quantity-input" value="1" min="1">
+      <button class="remove-from-cart-button">Remove</button>
+    </div>
+  </div>
 
-    <div class="cart-item">
-      <img src="path/to/image2.jpg" alt="Product 2">
-      <div class="cart-item-details">
-        <div class="cart-item-name">Product 2</div>
-        <div class="cart-item-description">Description of Product 2</div>
-        <div class="cart-item-price">$15.99</div>
-      </div>
-      <div class="quantity-and-remove">
-        <input type="number" class="quantity-input" value="1" min="1">
-        <button class="remove-from-cart-button">Remove</button>
-      </div>
+  <div class="cart-item">
+    <img src="path/to/image2.jpg" alt="Product 2">
+    <div class="cart-item-details">
+      <div class="cart-item-name">Product 2</div>
+      <div class="cart-item-description">Description of Product 2</div>
+      <div class="cart-item-price">$15.99</div>
     </div>
+    <div class="quantity-and-remove">
+      <input type="number" class="quantity-input" value="1" min="1">
+      <button class="remove-from-cart-button">Remove</button>
+    </div>
+  </div>
+</div>
 
     <!-- Add more cart items as needed -->
   </div>

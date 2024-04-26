@@ -49,9 +49,9 @@
         }
 
         .section-products {
-    display: flex;
-    flex-wrap: wrap;
-}
+            display: flex;
+            flex-wrap: wrap;
+         }
 
         .section-products .single-product {
             width: 25%; /* Set each product to occupy 25% of the container width */
@@ -163,23 +163,22 @@
             color: #fff;
             font-size: 14px;
             margin-left: auto;
-            /* Pushes contact info to the left */
+            
         }
 
         .auto-style1 {
             max-width: 1900px;
             margin: 0 auto;
-            /* Centering the content horizontally */
-            /* You can optionally add padding or margin if needed */
+            You can optionally add padding or margin if needed */
         }
 
-        /* Call to action button styles */
         .cta-button {
             background-color: #3c2a04;
             border: none;
             color: #fff;
             padding: 10px 20px;
             margin-top: 10px;
+            margin-bottom: 10px;
             text-decoration: none;
             font-size: 18px;
             border-radius: 5px;
@@ -189,7 +188,6 @@
 
         .cta-button:hover {
             background-color: #E4572E;
-            /* Darker shade on hover */
         }
 
         /* Hero section styles */
@@ -225,23 +223,21 @@
             z-index: 1;
             color: #fff;
             font-size: 48px;
-            /* Larger font size */
+          
             max-width: 50%;
-            /* Added maximum width */
             font-family: 'Pacifico', cursive;
-            /* Creative font style */
         }
         .sidebar {
             position: fixed;
             top: 60px; 
-            left: 0; /* Align sidebar to the left */
-            height: 100%; /* Fill the entire height of the viewport */
+            left: 0; 
+            height: 100%; 
             width: 200px;
             background-color: transparent;
             padding: 20px;
-            box-sizing: border-box; /* Include padding and border in the width */
-            overflow-y: auto; /* Enable vertical scrolling if content exceeds sidebar height */
-            border-right: 2px solid #000; /* Add border on the right side */
+            box-sizing: border-box; 
+            overflow-y: auto; 
+            border-right: 2px solid #000; 
          }
 
 
@@ -359,7 +355,7 @@
         }
 
         .add-to-cart-button {
-            background-color: #ffd700; /* Gold color for button */
+            background-color: #3c2a04; 
             color: #ffffff; /* White text for button */
             border: none;
             padding: 10px 20px;
@@ -392,18 +388,18 @@
     <header class="auto-style1"  CssClass="center" Height="100px" Width="100px">
         <div class="logo">
             
-            <span style="font-family: 'Arial', sans-serif;">COFFEING</span> <!-- Changed font -->
+            <span style="font-family: 'Pacifico', sans-serif;">COFFEING</span> 
         </div>
         <nav>
-            <a href="#"><i class="fas fa-search"></i></a> <!-- Magnifying glass icon -->
-            <a href="#"><i class="fas fa-bell"></i></a> <!-- Notification icon -->
+            <a href="#"><i class="fas fa-search"></i></a> 
+            <a href="#"><i class="fas fa-bell"></i></a> 
             <a href="#">Home</a>
-            <a href="about.html">About</a> <!-- Link to the about page -->
-            <a href="shop.html">Shop</a> <!-- Link to your shop page -->
+            <a href="about.html">About</a> 
+            <a href="shop.html">Shop</a> 
             <a href="#">Pages</a>
             <a href="#">Blog</a>
-            <a href="login.html">Sign In</a> <!-- Link to your login page -->
-            <a href="#" class="cta-button">Contact Us</a> <!-- Orange "Contact Us" button -->
+            <a href="login.html">Sign In</a> 
+            <a href="#" class="cta-button">Contact Us</a> 
         </nav>
     </header>
 

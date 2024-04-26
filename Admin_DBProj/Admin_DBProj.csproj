@@ -105,6 +105,7 @@
     <Content Include=".gitignore" />
     <Content Include="About.aspx" />
     <Content Include="cart.aspx" />
+    <Content Include="checkout.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -137,6 +138,7 @@
     <Content Include="Images\icons8-logout-52.png" />
     <Content Include="Images\icons8-logout-64.png" />
     <Content Include="Images\icons8-person-64.png" />
+    <Content Include="Images\—Pngtree—real shot coffee raw coffee_4416894.png" />
     <Content Include="login.aspx" />
     <Content Include="logincustomer.aspx" />
     <Content Include="products.aspx" />
