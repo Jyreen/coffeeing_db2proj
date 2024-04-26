@@ -89,8 +89,8 @@
             font-size: 24px;
         }
         .logout a img {
-            width: 35px; 
-            height: 35px; 
+            width: 25px; 
+            height: 25px; 
         }
         .order-section {
             background-color: #fff;
@@ -108,13 +108,13 @@
             <div class="sidebar">
                 <ul>
                     <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
-                    <li><a href="#"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
+                    <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
                     <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
                     <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
-                    <li><a href="#"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
+                    <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
                 </ul>
                 <div class="logout">
-                    <a href="login.aspx"><img src="../Images/icons8-logout-52.png" /></a>
+                    <a href="admin.aspx"><img src="../Images/icons8-logout-52.png" /></a>
                 </div>
             </div>
             <div class="content">
