@@ -92,60 +92,7 @@
         <div class="content">
             <h1>Coffeeing - Orders</h1>
             <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Order No</th>
-                            <th>ID No</th>
-                            <th>Name</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Sample data, replace with dynamic data from database -->
-                        <tr>
-                            <td>001</td>
-                            <td>1001</td>
-                            <td>John Doe</td>
-                            <td>2024-04-25</td>
-                            <td>
-                                <select>
-                                    <option value="Processing">Processing</option>
-                                    <option value="Shipped">Shipped</option>
-                                    <option value="Delivered">Delivered</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>1002</td>
-                            <td>Jane Smith</td>
-                            <td>2024-04-26</td>
-                            <td>
-                                <select>
-                                    <option value="Processing">Processing</option>
-                                    <option value="Shipped">Shipped</option>
-                                    <option value="Delivered">Delivered</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>003</td>
-                            <td>1003</td>
-                            <td>Michael Johnson</td>
-                            <td>2024-04-27</td>
-                            <td>
-                                <select>
-                                    <option value="Processing">Processing</option>
-                                    <option value="Shipped">Shipped</option>
-                                    <option value="Delivered">Delivered</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <!-- Add more rows for additional orders -->
-                    </tbody>
-                </table>
+                <asp:GridView ID="order" runat="server"></asp:GridView>
             </div>
         </div>
     </div>

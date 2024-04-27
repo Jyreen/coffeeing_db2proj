@@ -142,40 +142,7 @@
             </div>
             <div class="product-list">
                 <h2>Product List</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Sample only -->
-                        <tr>
-                            <td>Product 1</td>
-                            <td>Description of Product 1</td>
-                            <td>$10.00</td>
-                            <td>Available</td>
-                            <td>
-                                <button>Edit</button>
-                                <button>Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Product 2</td>
-                            <td>Description of Product 2</td>
-                            <td>$15.00</td>
-                            <td>Out of Stock</td>
-                            <td>
-                                <button>Edit</button>
-                                <button>Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <asp:GridView ID="product" runat="server"></asp:GridView>
             </div>
         </div>
     </div>
