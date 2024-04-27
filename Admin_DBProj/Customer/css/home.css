@@ -87,6 +87,8 @@ nav a:hover {
     transition: opacity 1s ease-in-out;
 }
 
+
+
 .hero img.active {
     opacity: 1;
 }
@@ -98,7 +100,29 @@ nav a:hover {
     transform: translateY(-50%);
     z-index: 1;
     color: #000000;
-    font-size: 48px; 
+    font-size:60px; 
     max-width: 50%; 
     font-family: 'Pacifico', cursive; 
 }
+
+.cta-button {
+    background-color: #714807; /* Custom color */
+    border: none;
+    color: #fff;
+    padding: 10px 20px; /* Adjusted padding */
+    margin-top: 10px; /* Adjusted margin top */
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 18px; /* Adjusted font size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+    .cta-button:hover {
+        background-color: chocolate; /* Darker shade on hover */
+    }
+
+
