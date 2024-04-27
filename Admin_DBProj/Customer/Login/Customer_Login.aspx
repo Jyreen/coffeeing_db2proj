@@ -18,16 +18,16 @@
     <div class="container">
         <h1 class="h1-container">LOGIN</h1>
         <div class="input-group">
-            <input type="text" id="username" placeholder="USERNAME" />
+            <asp:TextBox runat="server" type="email" name="email" id="email" placeholder="EMAIL" autocomplet="off"></asp:TextBox>
         </div>
         <div class="input-group">
-            <input type="password" id="password" placeholder="PASSWORD" />
+            <asp:TextBox runat="server" type="password" name="password" id="password" placeholder="PASSWORD" autocomplet="off"></asp:TextBox>
         </div>
         <div class="links-container">
             <a href="#">Forgot Password?</a>
             <a href="../Register/Customer_Register.aspx">Sign Up</a>
         </div>
-        <button type="submit" class="login-button">LOGIN</button>
+        <asp:Button id="btnlogin" runat="server" text="LOGIN" class="login-button" OnClick="btnLogin_Click" />
     </div>
     <div>
         <img class="bg-design" src="../../Images/Beans.png" />

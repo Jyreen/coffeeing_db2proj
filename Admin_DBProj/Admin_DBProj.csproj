@@ -104,6 +104,10 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="About.aspx" />
+    <Content Include="App_Data\COFFEING_DB.mdf" />
+    <Content Include="App_Data\COFFEING_DB_log.ldf">
+      <DependentUpon>COFFEING_DB.mdf</DependentUpon>
+    </Content>
     <Content Include="Customer\checkout.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -123,7 +127,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="customer.aspx" />
+    <Content Include="Admin_customer.aspx" />
     <Content Include="Customer\css\cart.css" />
     <Content Include="Customer\css\home.css" />
     <Content Include="Customer\css\prod.css" />
@@ -231,12 +235,12 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="customer.aspx.cs">
-      <DependentUpon>customer.aspx</DependentUpon>
+    <Compile Include="Admin_customer.aspx.cs">
+      <DependentUpon>Admin_customer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="customer.aspx.designer.cs">
-      <DependentUpon>customer.aspx</DependentUpon>
+    <Compile Include="Admin_customer.aspx.designer.cs">
+      <DependentUpon>Admin_customer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Customer_Cart.aspx.cs">
       <DependentUpon>Customer_Cart.aspx</DependentUpon>
@@ -334,9 +338,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
