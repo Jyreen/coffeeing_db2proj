@@ -21,10 +21,9 @@
         </div>
         <nav>
             <a href="#"><i class="fas fa-search"></i></a> 
-            <a href="#"><i class="fas fa-bell"></i></a> 
             <a href="#">Home</a>
-            <a href="about.html">About</a> 
-            <a href="shop.html">Shop</a> 
+            <a href="Customer_Profile.aspx">Profile</a> 
+            <a href="Customer_products.aspx">Shop</a> 
             <a href="Login/Customer_Login.aspx">Login</a> 
         </nav>
     </header>
@@ -44,7 +43,7 @@
 
     <!-- Product Section -->
     <section class="section-products product-section">
-        <div class="container">
+        <div class="container" >
             <div class="row justify-content-center text-center">
                 <div class="col-md-8 col-lg-6">
                     <div class="header">
