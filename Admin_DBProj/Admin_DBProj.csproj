@@ -103,6 +103,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+<<<<<<< HEAD
+    <Content Include="About.aspx" />
+    <Content Include="App_Data\COFFEING_DB.mdf" />
+    <Content Include="App_Data\COFFEING_DB_log.ldf">
+      <DependentUpon>COFFEING_DB.mdf</DependentUpon>
+    </Content>
+=======
+    <Content Include="Admin\analytics.aspx" />
+>>>>>>> 2d1fb3c8cd069a6673bfae1f3f1094bf5714be6b
     <Content Include="Customer\checkout.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -121,7 +130,11 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
+<<<<<<< HEAD
+    <Content Include="Admin_customer.aspx" />
+=======
     <Content Include="Admin\accounts.aspx" />
+>>>>>>> 2d1fb3c8cd069a6673bfae1f3f1094bf5714be6b
     <Content Include="Customer\css\cart.css" />
     <Content Include="Customer\css\home.css" />
     <Content Include="Customer\css\prod.css" />
@@ -134,11 +147,15 @@
     <Content Include="Customer\js\main.js" />
     <Content Include="Customer\Login\Customer_Login.aspx" />
     <Content Include="Customer\Register\Customer_Register.aspx" />
+    <Content Include="Customer\Customer_Profile.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Admin\home.aspx" />
+    <Content Include="Images\3cupswbeans.jpg" />
     <Content Include="Images\Beans.png" />
     <Content Include="Images\beans2.png" />
+    <Content Include="Images\beans_3.png" />
+    <Content Include="Images\coffeebeanswmug.png" />
     <Content Include="Images\icons8-analytics-60.png" />
     <Content Include="Images\icons8-cardboard-box-50.png" />
     <Content Include="Images\icons8-cart-48.png" />
@@ -147,6 +164,8 @@
     <Content Include="Images\icons8-logout-52.png" />
     <Content Include="Images\icons8-logout-64.png" />
     <Content Include="Images\icons8-person-64.png" />
+    <Content Include="Images\topviewmugs.jpg" />
+    <Content Include="Images\topviewroasted.jpg" />
     <Content Include="Images\—Pngtree—real shot coffee raw coffee_4416894.png" />
     <Content Include="Admin\admin.aspx" />
     <Content Include="Admin\products.aspx" />
@@ -213,14 +232,33 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\analytics.aspx.cs">
+      <DependentUpon>analytics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\analytics.aspx.designer.cs">
+      <DependentUpon>analytics.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Admin\accounts.aspx.cs">
       <DependentUpon>accounts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_customer.aspx.cs">
+      <DependentUpon>Admin_customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_customer.aspx.designer.cs">
+      <DependentUpon>Admin_customer.aspx</DependentUpon>
+=======
     <Compile Include="Admin\accounts.aspx.designer.cs">
       <DependentUpon>accounts.aspx</DependentUpon>
+>>>>>>> 2d1fb3c8cd069a6673bfae1f3f1094bf5714be6b
     </Compile>
     <Compile Include="Customer\Customer_Cart.aspx.cs">
       <DependentUpon>Customer_Cart.aspx</DependentUpon>
@@ -318,9 +356,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />

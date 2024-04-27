@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:Admin_DBProj/Admin_customer.aspx
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_customer.aspx.cs" Inherits="Admin_DBProj.customer" %>
+========
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="accounts.aspx.cs" Inherits="Admin_DBProj.customer" %>
+>>>>>>>> 2d1fb3c8cd069a6673bfae1f3f1094bf5714be6b:Admin_DBProj/Admin/accounts.aspx
 
 <!DOCTYPE html>
 <html lang="en">
@@ -136,10 +140,10 @@
         <div class="sidebar">
             <ul>
                 <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
-                <li><a href="#"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
+                <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
                 <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
                 <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
-                <li><a href="#"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
+                <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
             </ul>
         </div>
         <div class="content">

@@ -25,22 +25,25 @@
                 <a href="#"><i class="fas fa-search"></i></a> 
                 <a href="#"><i class="fas fa-bell"></i></a> 
                 <a href="#">Home</a>
-                <a href="about.html">About</a> 
-                <a href="productscustomer.aspx">Shop</a> 
-                <a href="Login/Customer_Login.aspx">Login</a> 
+                <a href="Customer_Products.aspx">Shop</a> 
+                <a href="Login/Customer_Login.aspx"">Login</a>
+                <a href="Register/Customer_Register.aspx" class="cta-button">Join Now</a>
+
+
             </nav>
     </header>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
             <h2 class="hero-title">COFFEING</h2> <!-- Title with creative font -->
-            <p style="font-size: 28px;">Crafting Moments, One Cup at a Time</p> <!-- Larger font size -->
+            <p style="font-size: 28px;">Awaken your senses</p> <!-- Larger font size -->
             <!-- "Shop Now" button -->
-            <a href="productscustomer.aspx" class="cta-button">Shop Now</a> <!-- "Shop Now" button -->
+            <a href="Customer_Products.aspx" class="cta-button">Shop Now</a> <!-- "Shop Now" button -->
         </div>
-        <img class="active" src="../Images/—Pngtree—real shot coffee raw coffee_4416894.png" alt="Coffee beans"> <!-- First image -->
-        <img ImageUrl="~/assests/imgs/espresso-surrounded-by-scattered-coffee-beans-dark-surface.jpg" alt="Coffee Making"> <!-- Second image -->
-        <img ImageUrl="~/assests/imgs/coffeeshop.jpg" alt="Espresso"> <!-- Third image -->
+        <img class="active" src="../Images/3cupswbeans.jpg" alt="3cupview"/> <!-- First image -->
+        <img class="active" src="../Images/topviewmugs.jpg" alt="Coffee Making"/> <!-- Second image -->
+        <img class="active" src="../Images/topviewroasted.jpg" alt="topviewcup2"/> <!-- Second image -->
+
         <!-- Add more images for slideshow as needed -->
     </section>
     </form>

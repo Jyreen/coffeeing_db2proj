@@ -14,6 +14,12 @@
             margin: 0;
             padding: 0;
         }
+        .header {
+            background-color: #F8F5EC;
+            color: black;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
         .container {
             display: flex;
             height: 100vh;
@@ -86,11 +92,13 @@
                 <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
                 <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
                 <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
-                <li><a href="#"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
+                <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
             </ul>
         </div>
         <div class="content">
-            <h1>Coffeeing - Orders</h1>
+             <div class="header">
+                 <h1>Coffeeing- Orders</h1>
+             </div>
             <div class="table-container">
                 <asp:GridView ID="order" runat="server"></asp:GridView>
             </div>
