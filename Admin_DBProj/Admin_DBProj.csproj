@@ -103,15 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-<<<<<<< HEAD
     <Content Include="About.aspx" />
     <Content Include="App_Data\COFFEING_DB.mdf" />
     <Content Include="App_Data\COFFEING_DB_log.ldf">
       <DependentUpon>COFFEING_DB.mdf</DependentUpon>
     </Content>
-=======
     <Content Include="Admin\analytics.aspx" />
->>>>>>> 2d1fb3c8cd069a6673bfae1f3f1094bf5714be6b
     <Content Include="Customer\checkout.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -130,11 +127,8 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
-<<<<<<< HEAD
     <Content Include="Admin_customer.aspx" />
-=======
     <Content Include="Admin\accounts.aspx" />
->>>>>>> 2d1fb3c8cd069a6673bfae1f3f1094bf5714be6b
     <Content Include="Customer\css\cart.css" />
     <Content Include="Customer\css\home.css" />
     <Content Include="Customer\css\prod.css" />
@@ -245,7 +239,6 @@
       <DependentUpon>accounts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
@@ -253,109 +246,108 @@
       <DependentUpon>Admin_customer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin_customer.aspx.designer.cs">
-      <DependentUpon>Admin_customer.aspx</DependentUpon>
-=======
-    <Compile Include="Admin\accounts.aspx.designer.cs">
-      <DependentUpon>accounts.aspx</DependentUpon>
->>>>>>> 2d1fb3c8cd069a6673bfae1f3f1094bf5714be6b
-    </Compile>
-    <Compile Include="Customer\Customer_Cart.aspx.cs">
-      <DependentUpon>Customer_Cart.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\Customer_Cart.aspx.designer.cs">
-      <DependentUpon>Customer_Cart.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\Customer_Checkout.aspx.cs">
-      <DependentUpon>Customer_Checkout.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\Customer_Checkout.aspx.designer.cs">
-      <DependentUpon>Customer_Checkout.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\Customer_Homepage.aspx.cs">
-      <DependentUpon>Customer_Homepage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\Customer_Homepage.aspx.designer.cs">
-      <DependentUpon>Customer_Homepage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\Customer_Products.aspx.cs">
-      <DependentUpon>Customer_Products.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\Customer_Products.aspx.designer.cs">
-      <DependentUpon>Customer_Products.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\Login\Customer_Login.aspx.cs">
-      <DependentUpon>Customer_Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\Login\Customer_Login.aspx.designer.cs">
-      <DependentUpon>Customer_Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\Register\Customer_Register.aspx.cs">
-      <DependentUpon>Customer_Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\Register\Customer_Register.aspx.designer.cs">
-      <DependentUpon>Customer_Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\home.aspx.cs">
-      <DependentUpon>home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\home.aspx.designer.cs">
-      <DependentUpon>home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\admin.aspx.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\admin.aspx.designer.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\products.aspx.cs">
-      <DependentUpon>products.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\products.aspx.designer.cs">
-      <DependentUpon>products.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\orders.aspx.cs">
-      <DependentUpon>orders.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\orders.aspx.designer.cs">
-      <DependentUpon>orders.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-  </ItemGroup>
+      <Compile Include="Admin_customer.aspx.designer.cs">
+        <DependentUpon>Admin_customer.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Admin\accounts.aspx.designer.cs">
+        <DependentUpon>accounts.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Customer\Customer_Cart.aspx.cs">
+        <DependentUpon>Customer_Cart.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Customer\Customer_Cart.aspx.designer.cs">
+        <DependentUpon>Customer_Cart.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Customer\Customer_Checkout.aspx.cs">
+        <DependentUpon>Customer_Checkout.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Customer\Customer_Checkout.aspx.designer.cs">
+        <DependentUpon>Customer_Checkout.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Customer\Customer_Homepage.aspx.cs">
+        <DependentUpon>Customer_Homepage.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Customer\Customer_Homepage.aspx.designer.cs">
+        <DependentUpon>Customer_Homepage.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Customer\Customer_Products.aspx.cs">
+        <DependentUpon>Customer_Products.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Customer\Customer_Products.aspx.designer.cs">
+        <DependentUpon>Customer_Products.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Customer\Login\Customer_Login.aspx.cs">
+        <DependentUpon>Customer_Login.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Customer\Login\Customer_Login.aspx.designer.cs">
+        <DependentUpon>Customer_Login.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Customer\Register\Customer_Register.aspx.cs">
+        <DependentUpon>Customer_Register.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Customer\Register\Customer_Register.aspx.designer.cs">
+        <DependentUpon>Customer_Register.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Global.asax.cs">
+        <DependentUpon>Global.asax</DependentUpon>
+      </Compile>
+      <Compile Include="Admin\home.aspx.cs">
+        <DependentUpon>home.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Admin\home.aspx.designer.cs">
+        <DependentUpon>home.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Admin\admin.aspx.cs">
+        <DependentUpon>admin.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Admin\admin.aspx.designer.cs">
+        <DependentUpon>admin.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Admin\products.aspx.cs">
+        <DependentUpon>products.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Admin\products.aspx.designer.cs">
+        <DependentUpon>products.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Admin\orders.aspx.cs">
+        <DependentUpon>orders.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Admin\orders.aspx.designer.cs">
+        <DependentUpon>orders.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Properties\AssemblyInfo.cs" />
+      <Compile Include="Site.Master.cs">
+        <DependentUpon>Site.Master</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Site.Master.designer.cs">
+        <DependentUpon>Site.Master</DependentUpon>
+      </Compile>
+      <Compile Include="Site.Mobile.Master.cs">
+        <DependentUpon>Site.Mobile.Master</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Site.Mobile.Master.designer.cs">
+        <DependentUpon>Site.Mobile.Master</DependentUpon>
+      </Compile>
+      <Compile Include="ViewSwitcher.ascx.cs">
+        <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="ViewSwitcher.ascx.designer.cs">
+        <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      </Compile>
+    </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
