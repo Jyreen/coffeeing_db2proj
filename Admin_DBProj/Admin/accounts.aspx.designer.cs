@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Admin_DBProj
-{
-
-
-    public partial class customer
-    {
+namespace Admin_DBProj {
+    
+    
+    public partial class accounts {
     }
 }

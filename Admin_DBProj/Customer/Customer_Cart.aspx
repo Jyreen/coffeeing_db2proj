@@ -16,6 +16,7 @@
 <body>
     <form id="form1" runat="server">
     <header class="auto-style1">
+        <a href="../App_Start/">../App_Start/</a>
         <div class="logo">
             <a href="Customer_Homepage.aspx"><span>COFFEING</span></a>
         </div>

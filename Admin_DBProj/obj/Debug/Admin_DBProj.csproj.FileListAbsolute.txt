@@ -217,7 +217,6 @@ C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj
 C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\bin\normnfd.nlp
 C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\bin\normnfkc.nlp
 C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\bin\normnfkd.nlp
-C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.csprojResolveAssemblyReference.cache
 C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.dll
 C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.pdb
 D:\coffeeing_db2proj\Admin_DBProj\bin\Admin_DBProj.dll.config

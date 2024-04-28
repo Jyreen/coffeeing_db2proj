@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:Admin_DBProj/Admin_customer.aspx
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_customer.aspx.cs" Inherits="Admin_DBProj.customer" %>
-========
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="accounts.aspx.cs" Inherits="Admin_DBProj.customer" %>
->>>>>>>> 2d1fb3c8cd069a6673bfae1f3f1094bf5714be6b:Admin_DBProj/Admin/accounts.aspx
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="accounts.aspx.cs" Inherits="Admin_DBProj.accounts" %>
 
 <!DOCTYPE html>
 <html lang="en">
