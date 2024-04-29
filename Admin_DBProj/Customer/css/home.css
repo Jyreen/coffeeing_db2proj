@@ -99,7 +99,7 @@ nav a:hover {
     left: 20px;
     transform: translateY(-50%);
     z-index: 1;
-    color: #000000;
+    color: #fff;
     font-size:60px; 
     max-width: 50%; 
     font-family: 'Pacifico', cursive; 

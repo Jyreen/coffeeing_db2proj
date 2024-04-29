@@ -23,13 +23,10 @@
         </div>
             <nav>
                 <a href="#"><i class="fas fa-search"></i></a> 
-                <a href="#"><i class="fas fa-bell"></i></a> 
                 <a href="#">Home</a>
                 <a href="Customer_Products.aspx">Shop</a> 
                 <a href="Login/Customer_Login.aspx"">Login</a>
                 <a href="Register/Customer_Register.aspx" class="cta-button">Join Now</a>
-
-
             </nav>
     </header>
     <!-- Hero Section -->

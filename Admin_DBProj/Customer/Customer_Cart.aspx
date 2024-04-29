@@ -16,17 +16,16 @@
 <body>
     <form id="form1" runat="server">
     <header class="auto-style1">
-        <a href="../App_Start/">../App_Start/</a>
+        <a href="../App_Start/"></a>
         <div class="logo">
             <a href="Customer_Homepage.aspx"><span>COFFEING</span></a>
         </div>
-        <nav>
+       <nav>
             <a href="#"><i class="fas fa-search"></i></a> <!-- Magnifying glass icon -->
             <a href="#"><i class="fas fa-bell"></i></a> <!-- Notification icon -->
-            <a href="#">Home</a>
-            <a href="about.html">About</a> <!-- Link to the about page -->
-            <a href="shop.html">Shop</a> <!-- Link to your shop page -->
-            <a href="Login/Customer_Login.aspx">Login</a> <!-- Link to your login page -->
+            <a href="Customer_Homepage.aspx">Home</a>
+            <a href="Customer_Products.aspx">Shop</a> <!-- Link to your shop page -->
+      
         </nav>
     </header>
         <section>
@@ -87,7 +86,10 @@
                     <div class="totals-value" id="cart-total">90.57</div>
                 </div>
             </div>
-            <button class="checkout">Checkout</button>
+            <div class="button-container text-center">
+        <button  class="checkout">Checkout</button>
+        <button  class="cancel">Cancel</button>
+    </div>
      </section>
     </form>
     <script src="js/cart.js"></script>

@@ -169,20 +169,31 @@ label {
 }
 
 
+
 .checkout {
-    float: right;
-    border: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    border: none;
     padding: 10px 20px;
-    background-color: #3c2a04; 
+    background-color: #3c2a04;
     color: #fff;
     font-size: 18px;
     border-radius: 9px;
+    cursor: pointer;
+    margin: 10px; /* Add spacing between buttons */
 }
 
-.checkout:hover {
-    background-color: #e6bb00;
+    .checkout:hover {
+        background-color: #e6bb00;
+    }
+
+.cancel {
+    border: none;
+    padding: 10px 20px;
+    background-color: #5c5959;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 9px;
+    cursor: pointer;
+    margin: 10px; /* Add spacing between buttons */
 }
 
 /* Make adjustments for tablet */

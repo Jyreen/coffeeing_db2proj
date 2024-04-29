@@ -12,4 +12,4 @@ const nextSlide = () => {
     setTimeout(() => current.classList.remove('active'));
 };
 
-setInterval(nextSlide, 5000); // Change slide every 5 seconds
+setInterval(nextSlide, 2000); // Change slide every 5 seconds

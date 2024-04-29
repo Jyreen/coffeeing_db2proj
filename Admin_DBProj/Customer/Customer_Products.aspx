@@ -21,24 +21,26 @@
         </div>
         <nav>
             <a href="#"><i class="fas fa-search"></i></a> 
-            <a href="#">Home</a>
+            <a href="Customer_Homepage.aspx">Home</a>
             <a href="Customer_Profile.aspx">Profile</a> 
             <a href="Customer_products.aspx">Shop</a> 
             <a href="Login/Customer_Login.aspx">Login</a> 
+            <a href="Customer_Cart.aspx"><i class="fas fa-shopping-cart"></i>Cart</a>
         </nav>
     </header>
 
     <!-- Sidebar -->
-    <div class="sidebar">
-        <input type="text" id="searchInput" placeholder="Search...">
+        <div class="sidebar">
+        <input type="text" id="searchInput" placeholder="Search..." />
+        <div>
         <ul>
             <li><a href="#">Coffee</a></li>
-            <li><a href="#">Pastries</a></li>
-            <li><a href="#">Cakes</a></li>
             <li><a href="#">Donuts</a></li>
             <!-- Add more categories as needed -->
         </ul>
+            </div>
     </div>
+
 
 
     <!-- Product Section -->
@@ -112,6 +114,17 @@
                         <button class="add-to-cart-button" onclick="addToCart('Coffeing Mocha', 4.45, 1)">Add to Cart</button>
                     </div>
                 </div>
+                <div class="menu-item">
+             <asp:Image ID="Image5" runat="server" CssClass="center" ImageUrl="~/assests/imgs/prod1.webp" />
+             <div class="menu-item-details">
+                 <div class="menu-item-name">Coffeing Mocha</div>
+                 <div class="menu-item-description">Indulge in the velvety smoothness of our classic espresso paired with decadent chocolate for a delightful mocha experience.</div>
+                 <div class="menu-item-price">$4.45</div>
+             </div>
+             <div class="quantity-and-cart">
+                 <input type="number" class="quantity-input" value="1" min="1">
+                 <button class="add-to-cart-button" onclick="addToCart('Coffeing Mocha', 4.45, 1)">Add to Cart</button>
+             </div>
               <!-- Add more menu items here -->
             </div>
         </div>
