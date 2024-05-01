@@ -100,7 +100,19 @@
                  <h1>Coffeeing- Orders</h1>
              </div>
             <div class="table-container">
-                <asp:GridView ID="order" runat="server"></asp:GridView>
+                <asp:GridView ID="order" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="ORDER_ID_PK">
+                    <Columns>
+                        <asp:BoundField DataField="ORDER_ID_PK" HeaderText="ORDER ID" ReadOnly="True" InsertVisible="False" SortExpression="ORDER_ID_PK"></asp:BoundField>
+                        <asp:BoundField DataField="ORDER_DATE" HeaderText="ORDER DATE" SortExpression="ORDER_DATE"></asp:BoundField>
+                        <asp:BoundField DataField="ORDER_TOTAL" HeaderText="ORDER TOTAL" SortExpression="ORDER_TOTAL"></asp:BoundField>
+                        <asp:BoundField DataField="ORDER_STATUS_ID_FK" HeaderText="ORDER STATUS ID" SortExpression="ORDER_STATUS_ID_FK"></asp:BoundField>
+                        <asp:BoundField DataField="SD_ADD_ID_FK" HeaderText="SAVED DELIVER ADD ID" SortExpression="SD_ADD_ID_FK"></asp:BoundField>
+                        <asp:BoundField DataField="ACC_ID_FK" HeaderText="ACCOUNT ID" SortExpression="ACC_ID_FK"></asp:BoundField>
+                        <asp:BoundField DataField="FBACK_ID_FK" HeaderText="FEEDBACK ID" SortExpression="FBACK_ID_FK"></asp:BoundField>
+                        <asp:BoundField DataField="PAY_ID" HeaderText="PAY ID" SortExpression="PAY_ID"></asp:BoundField>
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [ORDER]"></asp:SqlDataSource>
             </div>
         </div>
     </div>

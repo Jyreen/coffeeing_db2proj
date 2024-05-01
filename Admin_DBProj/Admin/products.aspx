@@ -142,7 +142,18 @@
             </div>
             <div class="product-list">
                 <h2>Product List</h2>
-                <asp:GridView ID="product" runat="server"></asp:GridView>
+                <asp:GridView ID="product" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="PRODUCT_ID_PK">
+                    <Columns>
+                        <asp:BoundField DataField="PRODUCT_ID_PK" HeaderText="PRODUCT ID" ReadOnly="True" InsertVisible="False" SortExpression="PRODUCT_ID_PK"></asp:BoundField>
+                        <asp:BoundField DataField="PRODUCT_NAME" HeaderText="PRODUCT NAME" SortExpression="PRODUCT_NAME"></asp:BoundField>
+                        <asp:BoundField DataField="PRODUCT_DESC" HeaderText="PRODUCT DESCRIPTION" SortExpression="PRODUCT_DESC"></asp:BoundField>
+                        <asp:BoundField DataField="PRODUCT_STATUS" HeaderText="PRODUCT STATUS" SortExpression="PRODUCT_STATUS"></asp:BoundField>
+                        <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRODUCT PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
+                        <asp:BoundField DataField="PRODUCT_QUANTITY" HeaderText="PRODUCT QUANTITY" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
+                        <asp:BoundField DataField="CATEGORY_ID_FK" HeaderText="CATEGORY ID " SortExpression="CATEGORY_ID_FK"></asp:BoundField>
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [PRODUCT]"></asp:SqlDataSource>
             </div>
         </div>
     </div>
