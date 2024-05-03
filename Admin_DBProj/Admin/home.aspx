@@ -79,6 +79,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-bottom: 10px;
         }
         .report-box h3 {
             margin-top: 0;
@@ -135,10 +136,10 @@
                         <p>200</p> <!-- Change this value dynamically -->
                     </div>
                 </div>
-                <div class="order-section">
-                    <h2>Recent Orders</h2>
-                    <asp:GridView runat="server"></asp:GridView>
-                </div>
+            </div>
+            <div class="order-section">
+                <h2>Recent Orders</h2>
+                <asp:GridView runat="server"></asp:GridView>
             </div>
         </div>
     </form>

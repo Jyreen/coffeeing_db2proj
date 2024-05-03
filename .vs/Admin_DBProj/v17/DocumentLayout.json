@@ -1,41 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\",
+  "WorkspaceRootPath": "D:\\coffeeing_db2proj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|c:\\users\\john axel\\onedrive\\documents\\coffeeing_db2proj\\admin_dbproj\\admin\\orders.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\orders.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\admin_dbproj\\admin\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\admin\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\admin_dbproj\\customer\\customer_homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\orders.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\orders.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\customer\\customer_homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\customer\\customer_homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\admin_dbproj\\customer\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\customer\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\customer\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\admin_dbproj\\customer\\customer_products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\customer\\customer_products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\customer\\customer_products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\admin_dbproj\\customer\\customer_cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\customer\\customer_cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\customer\\customer_cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\admin_dbproj\\customer\\css\\prod.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\customer\\css\\prod.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\customer\\css\\prod.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\admin_dbproj\\customer\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\customer\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\customer\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\admin_dbproj\\customer\\css\\cart.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\customer\\css\\cart.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\customer\\css\\cart.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
@@ -46,8 +50,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -55,10 +63,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "home.aspx",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\home.aspx",
+              "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\home.aspx",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\home.aspx",
+              "RelativeToolTip": "Admin_DBProj\\Admin\\home.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-03T13:51:45.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "orders.aspx",
-              "DocumentMoniker": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Admin\\orders.aspx",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\orders.aspx",
               "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\orders.aspx",
-              "ToolTip": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Admin\\orders.aspx",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\orders.aspx",
               "RelativeToolTip": "Admin_DBProj\\Admin\\orders.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -69,25 +90,22 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "products.aspx",
-              "DocumentMoniker": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Admin\\products.aspx",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\products.aspx",
               "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\products.aspx",
-              "ToolTip": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Admin\\products.aspx",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\products.aspx",
               "RelativeToolTip": "Admin_DBProj\\Admin\\products.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-04-30T17:32:47.115Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2024-04-30T17:32:47.115Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "home.css",
-              "DocumentMoniker": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\home.css",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\home.css",
               "RelativeDocumentMoniker": "Admin_DBProj\\Customer\\css\\home.css",
-              "ToolTip": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\home.css",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\home.css",
               "RelativeToolTip": "Admin_DBProj\\Customer\\css\\home.css",
               "ViewState": "AQIAAFQAAAAAAAAAAIBJwFcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -95,11 +113,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "main.js",
-              "DocumentMoniker": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\js\\main.js",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\js\\main.js",
               "RelativeDocumentMoniker": "Admin_DBProj\\Customer\\js\\main.js",
-              "ToolTip": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\js\\main.js",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\js\\main.js",
               "RelativeToolTip": "Admin_DBProj\\Customer\\js\\main.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
@@ -107,11 +125,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Customer_Homepage.aspx",
-              "DocumentMoniker": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Homepage.aspx",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Homepage.aspx",
               "RelativeDocumentMoniker": "Admin_DBProj\\Customer\\Customer_Homepage.aspx",
-              "ToolTip": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Homepage.aspx",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Homepage.aspx",
               "RelativeToolTip": "Admin_DBProj\\Customer\\Customer_Homepage.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -119,11 +137,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "prod.css",
-              "DocumentMoniker": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\prod.css",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\prod.css",
               "RelativeDocumentMoniker": "Admin_DBProj\\Customer\\css\\prod.css",
-              "ToolTip": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\prod.css",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\prod.css",
               "RelativeToolTip": "Admin_DBProj\\Customer\\css\\prod.css",
               "ViewState": "AQIAALoAAAAAAAAAAIBJwMwAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -131,11 +149,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "cart.css",
-              "DocumentMoniker": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\cart.css",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\cart.css",
               "RelativeDocumentMoniker": "Admin_DBProj\\Customer\\css\\cart.css",
-              "ToolTip": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\cart.css",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\css\\cart.css",
               "RelativeToolTip": "Admin_DBProj\\Customer\\css\\cart.css",
               "ViewState": "AQIAAKYAAAAAAAAAAIBJwMQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -143,11 +161,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Customer_Cart.aspx",
-              "DocumentMoniker": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Cart.aspx",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Cart.aspx",
               "RelativeDocumentMoniker": "Admin_DBProj\\Customer\\Customer_Cart.aspx",
-              "ToolTip": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Cart.aspx",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Cart.aspx",
               "RelativeToolTip": "Admin_DBProj\\Customer\\Customer_Cart.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -155,11 +173,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Customer_Products.aspx",
-              "DocumentMoniker": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Products.aspx",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Products.aspx",
               "RelativeDocumentMoniker": "Admin_DBProj\\Customer\\Customer_Products.aspx",
-              "ToolTip": "C:\\Users\\John Axel\\OneDrive\\Documents\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Products.aspx",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Customer\\Customer_Products.aspx",
               "RelativeToolTip": "Admin_DBProj\\Customer\\Customer_Products.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
