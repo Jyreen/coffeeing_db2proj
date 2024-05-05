@@ -103,12 +103,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="Admin\analytics.aspx" />
     <Content Include="App_Data\COFFEING_DB.mdf" />
     <Content Include="App_Data\COFFEING_DB_log.ldf">
       <DependentUpon>COFFEING_DB.mdf</DependentUpon>
     </Content>
-    <Content Include="Admin\analytics.aspx" />
-    <Content Include="Customer\checkout.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -148,6 +147,10 @@
     <Content Include="Images\beans2.png" />
     <Content Include="Images\beans_3.png" />
     <Content Include="Images\coffeebeanswmug.png" />
+    <Content Include="Images\Froccino-cookies.jpg" />
+    <Content Include="Images\froccino-mocha.jpg" />
+    <Content Include="Images\hot-caramel-latte.jpg" />
+    <Content Include="Images\hot-coffee-mocha.jpg" />
     <Content Include="Images\icons8-analytics-60.png" />
     <Content Include="Images\icons8-cardboard-box-50.png" />
     <Content Include="Images\icons8-cart-48.png" />

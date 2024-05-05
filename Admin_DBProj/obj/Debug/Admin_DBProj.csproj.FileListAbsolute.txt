@@ -438,3 +438,4 @@ D:\coffeeing_db2proj\Admin_DBProj\bin\roslyn\vbc.exe.config
 D:\coffeeing_db2proj\Admin_DBProj\bin\roslyn\vbc.rsp
 D:\coffeeing_db2proj\Admin_DBProj\bin\roslyn\VBCSCompiler.exe
 D:\coffeeing_db2proj\Admin_DBProj\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.csprojResolveAssemblyReference.cache

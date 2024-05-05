@@ -54,80 +54,23 @@
                 </div>
             </div>
             <div class="menu-grid">
-                <div class="menu-item">
-                    <asp:Image ID="Image1" runat="server" CssClass="center" ImageUrl="~/assests/imgs/prod1.webp" />
-                    <div class="menu-item-details">
-                        <div class="menu-item-name">Coffeing Mocha</div>
-                        <div class="menu-item-description">Indulge in the velvety smoothness of our classic espresso paired with decadent chocolate for a delightful mocha experience.</div>
-                        <div class="menu-item-price">$4.45</div>
-                    </div>
-                    <div class="quantity-and-cart">
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="add-to-cart-button" onclick="addToCart('Coffeing Mocha', 4.45, 1)">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="" alt="Coffeing 3">
-                    <div class="menu-item-details">
-                        <div class="menu-item-name">Coffeing Caramel Macchiato</div>
-                        <div class="menu-item-description">A harmonious blend of rich espresso, steamed milk, and luscious caramel drizzle, creating a symphony of flavors in every sip.</div>
-                        <div class="menu-item-price">$4.25</div>
-                    </div>
-                    <div class="quantity-and-cart">
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="add-to-cart-button" onclick="addToCart('Rexpresso Caramel Macchiato', 4.25, 1)">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <asp:Image ID="Image2" runat="server" CssClass="center" ImageUrl="~/assests/imgs/prod1.webp" />
-                    <div class="menu-item-details">
-                        <div class="menu-item-name">Coffeing Mocha</div>
-                        <div class="menu-item-description">Indulge in the velvety smoothness of our classic espresso paired with decadent chocolate for a delightful mocha experience.</div>
-                        <div class="menu-item-price">$4.45</div>
-                    </div>
-                    <div class="quantity-and-cart">
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="add-to-cart-button" onclick="addToCart('Coffeing Mocha', 4.45, 1)">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <asp:Image ID="Image3" runat="server" CssClass="center" ImageUrl="~/assests/imgs/prod1.webp" />
-                        <div class="menu-item-details">
-                        <div class="menu-item-name">Coffeing Mocha</div>
-                        <div class="menu-item-description">Indulge in the velvety smoothness of our classic espresso paired with decadent chocolate for a delightful mocha experience.</div>
-                        <div class="menu-item-price">$4.45</div>
-                    </div>
-                    <div class="quantity-and-cart">
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="add-to-cart-button" onclick="addToCart('Coffeing Mocha', 4.45, 1)">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <asp:Image ID="Image4" runat="server" CssClass="center" ImageUrl="~/assests/imgs/prod1.webp" />
-                    <div class="menu-item-details">
-                        <div class="menu-item-name">Coffeing Mocha</div>
-                        <div class="menu-item-description">Indulge in the velvety smoothness of our classic espresso paired with decadent chocolate for a delightful mocha experience.</div>
-                        <div class="menu-item-price">$4.45</div>
-                    </div>
-                    <div class="quantity-and-cart">
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="add-to-cart-button" onclick="addToCart('Coffeing Mocha', 4.45, 1)">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="menu-item">
-             <asp:Image ID="Image5" runat="server" CssClass="center" ImageUrl="~/assests/imgs/prod1.webp" />
-             <div class="menu-item-details">
-                 <div class="menu-item-name">Coffeing Mocha</div>
-                 <div class="menu-item-description">Indulge in the velvety smoothness of our classic espresso paired with decadent chocolate for a delightful mocha experience.</div>
-                 <div class="menu-item-price">$4.45</div>
-             </div>
-             <div class="quantity-and-cart">
-                 <input type="number" class="quantity-input" value="1" min="1">
-                 <button class="add-to-cart-button" onclick="addToCart('Coffeing Mocha', 4.45, 1)">Add to Cart</button>
-             </div>
-              <!-- Add more menu items here -->
+                <% foreach (var product in Products) { %>
+                    <% if (product.PRODUCT_STATUS == 1) { %> 
+                        <div class="menu-item">
+                            <img class="center" src="<%= product.PRODUCT_IMG %>" />
+                            <div class="menu-item-details">
+                                <div class="menu-item-name"><%= product.PRODUCT_NAME %></div>
+                                <div class="menu-item-description"><%= product.PRODUCT_DESC %></div>
+                                <div class="menu-item-price"><%= product.PRODUCT_PRICE %></div>
+                            </div>
+                            <div class="quantity-and-cart">
+                                <input type="number" class="quantity-input" value="1" min="1">
+                                <button class="add-to-cart-button" onclick="addToCart('<%= product.PRODUCT_NAME %>', '<%= product.PRODUCT_PRICE %>', 1)">Add to Cart</button>
+                            </div>
+                        </div>
+                    <% } %>
+                <% } %>
             </div>
-        </div>
     </section>
     </form>
 </body>

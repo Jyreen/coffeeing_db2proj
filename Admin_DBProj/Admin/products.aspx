@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head runat="server">
     <title>Admin Dashboard - Products</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-A/n8r9iKqroIiJsCxpx88lRYabNt7emRyVzR2T+1GnL/LbBCFLhIOBkye5ofd40wYbIB+DxXp1Bcy2r34W0zZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -114,48 +114,50 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <ul>
-                <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
-                <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
-                <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
-                <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
-                <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
-            </ul>
+    <form runat="server">
+        <div class="container">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
+                    <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
+                    <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
+                    <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
+                    <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="header">
+                    <h1>Coffeeing- Products</h1>
+                </div>
+                <div class="product-form">
+                    <form >
+                        <input type="text" placeholder="Name" />
+                        <input type="text" placeholder="Description" />
+                        <input type="text" placeholder="Price" />
+                        <select>
+                            <option value="available">Available</option>
+                            <option value="outofstock">Out of Stock</option>
+                        </select>
+                        <button type="submit">Add Product</button>
+                    </form>
+                </div>
+                <div class="product-list">
+                    <h2>Product List</h2>
+                    <asp:GridView ID="product" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="PRODUCT_ID_PK">
+                        <Columns>
+                            <asp:BoundField DataField="PRODUCT_ID_PK" HeaderText="PRODUCT ID" ReadOnly="True" InsertVisible="False" SortExpression="PRODUCT_ID_PK"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_NAME" HeaderText="PRODUCT NAME" SortExpression="PRODUCT_NAME"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_DESC" HeaderText="PRODUCT DESCRIPTION" SortExpression="PRODUCT_DESC"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_STATUS" HeaderText="PRODUCT STATUS" SortExpression="PRODUCT_STATUS"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRODUCT PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_QUANTITY" HeaderText="PRODUCT QUANTITY" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
+                            <asp:BoundField DataField="CATEGORY_ID_FK" HeaderText="CATEGORY ID " SortExpression="CATEGORY_ID_FK"></asp:BoundField>
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [PRODUCT]"></asp:SqlDataSource>
+                </div>
+            </div>
         </div>
-        <div class="content">
-            <div class="header">
-                <h1>Coffeeing- Products</h1>
-            </div>
-            <div class="product-form">
-                <form>
-                    <input type="text" placeholder="Name" />
-                    <input type="text" placeholder="Description" />
-                    <input type="text" placeholder="Price" />
-                    <select>
-                        <option value="available">Available</option>
-                        <option value="outofstock">Out of Stock</option>
-                    </select>
-                    <button type="submit">Add Product</button>
-                </form>
-            </div>
-            <div class="product-list">
-                <h2>Product List</h2>
-                <asp:GridView ID="product" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="PRODUCT_ID_PK">
-                    <Columns>
-                        <asp:BoundField DataField="PRODUCT_ID_PK" HeaderText="PRODUCT ID" ReadOnly="True" InsertVisible="False" SortExpression="PRODUCT_ID_PK"></asp:BoundField>
-                        <asp:BoundField DataField="PRODUCT_NAME" HeaderText="PRODUCT NAME" SortExpression="PRODUCT_NAME"></asp:BoundField>
-                        <asp:BoundField DataField="PRODUCT_DESC" HeaderText="PRODUCT DESCRIPTION" SortExpression="PRODUCT_DESC"></asp:BoundField>
-                        <asp:BoundField DataField="PRODUCT_STATUS" HeaderText="PRODUCT STATUS" SortExpression="PRODUCT_STATUS"></asp:BoundField>
-                        <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRODUCT PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
-                        <asp:BoundField DataField="PRODUCT_QUANTITY" HeaderText="PRODUCT QUANTITY" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
-                        <asp:BoundField DataField="CATEGORY_ID_FK" HeaderText="CATEGORY ID " SortExpression="CATEGORY_ID_FK"></asp:BoundField>
-                    </Columns>
-                </asp:GridView>
-                <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [PRODUCT]"></asp:SqlDataSource>
-            </div>
-        </div>
-    </div>
+    </form>>
 </body>
 </html>
