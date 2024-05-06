@@ -55,10 +55,10 @@
 <body>
     <div class="login-container">
         <h2>Admin Login</h2>
-        <form action="#" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Login">
+        <form action="#" method="post" runat="server">
+            <asp:TextBox ID="txtUsername" runat="server" placeholder="Username"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
+            <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
         </form>
     </div>
 </body>

@@ -118,6 +118,22 @@
         .customer-list tr:hover {
             background-color: #f2f2f2;
         }
+        .add-customer-button {
+            width: calc(50% - 10px);
+            padding: 10px 20px;
+            background-color: #b37333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-customer-button:hover {
+            background-color: #955f28;
+        }
+
         .search-bar {
             margin-bottom: 20px;
         }
@@ -148,17 +164,16 @@
                     <h1>Coffeeing - Customers</h1>
                 </div>
                 <div class="customer-form">
-                    <form>
-                        <input type="text" placeholder="Name" />
-                        <input type="text" placeholder="Address" />
-                        <input type="email" placeholder="Email" />
-                        <input type="tel" placeholder="Contact Number" />
-                        <input type="password" placeholder="Password" />
-                        <button type="submit">Add Customer <i class="fas fa-plus"></i></button>
-                    </form>
+                    <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name"></asp:TextBox>
+                    <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name"></asp:TextBox>
+                    <asp:TextBox ID="txtAddress" runat="server" placeholder="Address"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
+                    <asp:TextBox ID="txtContactNumber" runat="server" placeholder="Contact Number"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                    <asp:Button ID="btnAddCustomer" runat="server" Text="Add Customer" OnClick="btnAddCustomer_Click" CssClass="add-customer-button"/>
                 </div>
                 <div class="search-bar">
-                    <input type="text" placeholder="Search...">
+                    <asp:TextBox ID="Search" runat="server" placeholder="Search..."></asp:TextBox> <asp:Button ID="Button1" runat="server" Text="SEARCH" />
                 </div>
                 <div class="customer-list">
                     <h2>Customer List</h2>
@@ -168,6 +183,12 @@
                             <asp:BoundField DataField="ACC_EMAIL" HeaderText="EMAIL" SortExpression="ACC_EMAIL"></asp:BoundField>
                             <asp:BoundField DataField="ACC_ADDRESS" HeaderText="ADDRESS" SortExpression="ACC_ADDRESS"></asp:BoundField>
                             <asp:BoundField DataField="ACC_PNUM" HeaderText="CONTACT NUMBER" SortExpression="ACC_PNUM"></asp:BoundField>
+                            <asp:TemplateField HeaderText=" ">
+                            <ItemTemplate>
+                                <asp:Button ID="btnEdit" runat="server" Text="Edit" CommandName="Edit" CommandArgument='<%# Container.DataItemIndex %>' CssClass="action-button" />
+                                <asp:Button ID="btnDeactivate" runat="server" Text="Deactivate" CommandName="Deactivate" CommandArgument='<%# Container.DataItemIndex %>' CssClass="action-button" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
                     <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SP_Customers_GV" SelectCommandType="StoredProcedure"></asp:SqlDataSource>

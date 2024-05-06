@@ -14,6 +14,19 @@ namespace Admin_DBProj
 
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
 
+            if (username == "admincoffee" && password == "coffeeingisthebest123")
+            {
+                Response.Redirect("home.aspx");
+            }
+            else
+            {
+                Response.Write("<script>alert('Invalid username or password. Please try again.');</script>");
+            }
+        }
     }
 }

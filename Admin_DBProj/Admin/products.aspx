@@ -96,6 +96,19 @@
             width: 100%;
             border-collapse: collapse;
         }
+         .product-form-button {
+            width: 100%;
+            background-color: #b37333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .product-form-button:hover {
+            background-color: #955f28;
+        }
         .product-list th, .product-list td {
             padding: 10px;
             border: 1px solid #ccc;
@@ -130,25 +143,30 @@
                     <h1>Coffeeing- Products</h1>
                 </div>
                 <div class="product-form">
-                    <form >
-                        <input type="text" placeholder="Name" />
-                        <input type="text" placeholder="Description" />
-                        <input type="text" placeholder="Price" />
-                        <select>
-                            <option value="available">Available</option>
-                            <option value="outofstock">Out of Stock</option>
-                        </select>
-                        <button type="submit">Add Product</button>
-                        <asp:Button ID="Button1" runat="server" Text="Button" />
-                    </form>
+                    <asp:TextBox ID="txtName" runat="server" placeholder="Name"></asp:TextBox>
+                    <asp:TextBox ID="txtDesc" runat="server" placeholder="Description"></asp:TextBox>
+                    <asp:TextBox ID="txtPrice" runat="server" placeholder="Price"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownList1" runat="server" placeholder="Status">
+                        <asp:ListItem Text="Available" Value="Available"></asp:ListItem>
+                        <asp:ListItem Text="Unavailable" Value="Unavailable"></asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:Button ID="Button1" runat="server" Text="Add Product" CssClass="product-form-button" OnClick="Button1_Click" />
                 </div>
                 <div class="product-list">
                     <h2>Product List</h2>
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                         <Columns>
-                            <asp:BoundField DataField="PRODUCT_NAME" HeaderText="PRODUCT_NAME" SortExpression="PRODUCT_NAME"></asp:BoundField>
-                            <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRODUCT_PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
-                            <asp:BoundField DataField="PRODUCT_QUANTITY" HeaderText="PRODUCT_QUANTITY" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_NAME" HeaderText="NAME" SortExpression="PRODUCT_NAME"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_QUANTITY" HeaderText="QUANTITY" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRICE" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_STATUS" HeaderText="STATUS" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
+                            <asp:TemplateField HeaderText=" ">
+                                <ItemTemplate>
+                                    <asp:Button ID="btnEdit" runat="server" Text="Edit" CommandName="Edit" />
+                                    <asp:Button ID="btnDeactivate" runat="server" Text="Deactivate" CommandName="Deactivate" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
                     <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SP_Products_GV" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
