@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="Admin_DBProj.home" %>
+﻿    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="Admin_DBProj.home" %>
 
 <!DOCTYPE html>
 <html lang="en">

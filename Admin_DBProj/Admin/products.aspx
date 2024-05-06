@@ -139,22 +139,19 @@
                             <option value="outofstock">Out of Stock</option>
                         </select>
                         <button type="submit">Add Product</button>
+                        <asp:Button ID="Button1" runat="server" Text="Button" />
                     </form>
                 </div>
                 <div class="product-list">
                     <h2>Product List</h2>
-                    <asp:GridView ID="product" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="PRODUCT_ID_PK">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                         <Columns>
-                            <asp:BoundField DataField="PRODUCT_ID_PK" HeaderText="PRODUCT ID" ReadOnly="True" InsertVisible="False" SortExpression="PRODUCT_ID_PK"></asp:BoundField>
-                            <asp:BoundField DataField="PRODUCT_NAME" HeaderText="PRODUCT NAME" SortExpression="PRODUCT_NAME"></asp:BoundField>
-                            <asp:BoundField DataField="PRODUCT_DESC" HeaderText="PRODUCT DESCRIPTION" SortExpression="PRODUCT_DESC"></asp:BoundField>
-                            <asp:BoundField DataField="PRODUCT_STATUS" HeaderText="PRODUCT STATUS" SortExpression="PRODUCT_STATUS"></asp:BoundField>
-                            <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRODUCT PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
-                            <asp:BoundField DataField="PRODUCT_QUANTITY" HeaderText="PRODUCT QUANTITY" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
-                            <asp:BoundField DataField="CATEGORY_ID_FK" HeaderText="CATEGORY ID " SortExpression="CATEGORY_ID_FK"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_NAME" HeaderText="PRODUCT_NAME" SortExpression="PRODUCT_NAME"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRODUCT_PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_QUANTITY" HeaderText="PRODUCT_QUANTITY" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
                         </Columns>
                     </asp:GridView>
-                    <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [PRODUCT]"></asp:SqlDataSource>
+                    <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SP_Products_GV" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                 </div>
             </div>
         </div>

@@ -132,72 +132,48 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <ul>
-                <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
-                <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
-                <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
-                <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
-                <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <div class="header">
-                <h1>Coffeeing - Customers</h1>
+    <form runat="server">
+        <div class="container">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
+                    <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
+                    <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
+                    <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
+                    <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
+                </ul>
             </div>
-            <div class="customer-form">
-                <form>
-                    <input type="text" placeholder="Name" />
-                    <input type="text" placeholder="Address" />
-                    <input type="email" placeholder="Email" />
-                    <input type="tel" placeholder="Contact Number" />
-                    <input type="password" placeholder="Password" />
-                    <button type="submit">Add Customer <i class="fas fa-plus"></i></button>
-                </form>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-            </div>
-            <div class="customer-list">
-                <h2>Customer List</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Address</th>
-                            <th>Email</th>
-                            <th>Contact Number</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Populate this section dynamically from database -->
-                        <tr>
-                            <td>Customer 1</td>
-                            <td>Address of Customer 1</td>
-                            <td>customer1@example.com</td>
-                            <td>1234567890</td>
-                            <td>
-                                <button><i class="fas fa-edit"></i></button>
-                                <button><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Customer 2</td>
-                            <td>Address of Customer 2</td>
-                            <td>customer2@example.com</td>
-                            <td>9876543210</td>
-                            <td>
-                                <button><i class="fas fa-edit"></i></button>
-                                <button><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <!-- Add more rows as needed -->
-                    </tbody>
-                </table>
+            <div class="content">
+                <div class="header">
+                    <h1>Coffeeing - Customers</h1>
+                </div>
+                <div class="customer-form">
+                    <form>
+                        <input type="text" placeholder="Name" />
+                        <input type="text" placeholder="Address" />
+                        <input type="email" placeholder="Email" />
+                        <input type="tel" placeholder="Contact Number" />
+                        <input type="password" placeholder="Password" />
+                        <button type="submit">Add Customer <i class="fas fa-plus"></i></button>
+                    </form>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="customer-list">
+                    <h2>Customer List</h2>
+                    <asp:GridView runat="server" DataSourceID="SqlDataSource1" ID="ctl02" AutoGenerateColumns="False">
+                        <Columns>
+                            <asp:BoundField DataField="ACC_NAME" HeaderText="NAME" ReadOnly="True" SortExpression="ACC_NAME"></asp:BoundField>
+                            <asp:BoundField DataField="ACC_EMAIL" HeaderText="EMAIL" SortExpression="ACC_EMAIL"></asp:BoundField>
+                            <asp:BoundField DataField="ACC_ADDRESS" HeaderText="ADDRESS" SortExpression="ACC_ADDRESS"></asp:BoundField>
+                            <asp:BoundField DataField="ACC_PNUM" HeaderText="CONTACT NUMBER" SortExpression="ACC_PNUM"></asp:BoundField>
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SP_Customers_GV" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 </html>
