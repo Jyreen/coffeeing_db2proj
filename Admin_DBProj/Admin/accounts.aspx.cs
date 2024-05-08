@@ -18,6 +18,16 @@ namespace Admin_DBProj
 
         }
 
+        protected void btnShowAddCustomer_Click(object sender, EventArgs e)
+        {
+            AddPanel.Visible = !AddPanel.Visible;
+        }
+
+        protected void btnShowUpdateCustomer_Click(object sender, EventArgs e)
+        {
+            UpdatePanel.Visible = !UpdatePanel.Visible;
+        }
+
         protected void btnAddCustomer_Click(object sender, EventArgs e)
         {
             string fname = txtFirstName.Text;

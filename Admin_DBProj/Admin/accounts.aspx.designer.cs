@@ -7,13 +7,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Admin_DBProj
-{
-
-
-    public partial class accounts
-    {
-
+namespace Admin_DBProj {
+    
+    
+    public partial class accounts {
+        
+        /// <summary>
+        /// btnShowAddCustomer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnShowAddCustomer;
+        
+        /// <summary>
+        /// btnShowUpdateCustomer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnShowUpdateCustomer;
+        
+        /// <summary>
+        /// AddPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel AddPanel;
+        
         /// <summary>
         /// txtFirstName control.
         /// </summary>
@@ -22,7 +47,7 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
-
+        
         /// <summary>
         /// txtLastName control.
         /// </summary>
@@ -31,7 +56,7 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
-
+        
         /// <summary>
         /// txtAddress control.
         /// </summary>
@@ -40,7 +65,7 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
-
+        
         /// <summary>
         /// txtEmail control.
         /// </summary>
@@ -49,7 +74,7 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
-
+        
         /// <summary>
         /// txtContactNumber control.
         /// </summary>
@@ -58,7 +83,7 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtContactNumber;
-
+        
         /// <summary>
         /// txtPassword control.
         /// </summary>
@@ -67,7 +92,7 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
-
+        
         /// <summary>
         /// btnAddCustomer control.
         /// </summary>
@@ -76,7 +101,97 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddCustomer;
-
+        
+        /// <summary>
+        /// UpdatePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel UpdatePanel;
+        
+        /// <summary>
+        /// getCustomerData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button getCustomerData;
+        
+        /// <summary>
+        /// getName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox getName;
+        
+        /// <summary>
+        /// uFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox uFirstName;
+        
+        /// <summary>
+        /// uLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox uLastName;
+        
+        /// <summary>
+        /// uAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox uAddress;
+        
+        /// <summary>
+        /// uEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox uEmail;
+        
+        /// <summary>
+        /// uContactNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox uContactNumber;
+        
+        /// <summary>
+        /// uPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox uPassword;
+        
+        /// <summary>
+        /// btnUpdateCustomer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdateCustomer;
+        
         /// <summary>
         /// Search control.
         /// </summary>
@@ -85,7 +200,7 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Search;
-
+        
         /// <summary>
         /// Button1 control.
         /// </summary>
@@ -94,7 +209,7 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-
+        
         /// <summary>
         /// ctl02 control.
         /// </summary>
@@ -103,7 +218,7 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView ctl02;
-
+        
         /// <summary>
         /// SqlDataSource1 control.
         /// </summary>
