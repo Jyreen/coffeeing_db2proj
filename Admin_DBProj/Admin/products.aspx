@@ -146,15 +146,20 @@
                     <asp:TextBox ID="txtName" runat="server" placeholder="Name"></asp:TextBox>
                     <asp:TextBox ID="txtDesc" runat="server" placeholder="Description"></asp:TextBox>
                     <asp:TextBox ID="txtPrice" runat="server" placeholder="Price"></asp:TextBox>
+                     <asp:DropDownList ID="DropDownList2" runat="server" placeholder="Category">
+                        <asp:ListItem Text="Donut" Value="Donut"></asp:ListItem>
+                        <asp:ListItem Text="Coffee" Value="Coffee"></asp:ListItem>
+                     </asp:DropDownList>
+
                     <asp:DropDownList ID="DropDownList1" runat="server" placeholder="Status">
                         <asp:ListItem Text="Available" Value="Available"></asp:ListItem>
-                        <asp:ListItem Text="Unavailable" Value="Unavailable"></asp:ListItem>
+                        <asp:ListItem Text="Unavailable" Value="Unavailax`ble"></asp:ListItem>
                     </asp:DropDownList>
-                    <asp:Button ID="Button1" runat="server" Text="Add Product" CssClass="product-form-button" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" runat="server" Text="Add Product" CssClass="product-form-button" OnClick="btnAddProduct_Click" />
                 </div>
                 <div class="product-list">
                     <h2>Product List</h2>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                    <asp:GridView ID="prod" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                         <Columns>
                             <asp:BoundField DataField="PRODUCT_NAME" HeaderText="NAME" SortExpression="PRODUCT_NAME"></asp:BoundField>
                             <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
