@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Security;
+using System.Configuration;
 
 namespace Admin_DBProj.Customer
 {
@@ -25,10 +26,10 @@ namespace Admin_DBProj.Customer
         private List<Product> GetProductsFromDataBase()
         {
             List<Product> products = new List<Product>();
-            string connectionstring = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\App_Data\COFFEING_DB.mdf;Integrated Security=True";
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             string query = "SELECT * FROM PRODUCT";
 
-            using (SqlConnection cn = new SqlConnection(connectionstring))
+            using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand(query, cn))
                 {

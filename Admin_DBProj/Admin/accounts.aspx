@@ -134,6 +134,23 @@
             background-color: #955f28;
         }
 
+        .insert-customer-button {
+            width: calc(20% - 10px);
+            padding: 10px 20px;
+            background-color: #b37333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .insert-customer-button:hover {
+            background-color: #955f28;
+        }
+
         .search-bar {
             margin-bottom: 20px;
         }
@@ -164,13 +181,28 @@
                     <h1>Coffeeing - Customers</h1>
                 </div>
                 <div class="customer-form">
-                    <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name"></asp:TextBox>
-                    <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name"></asp:TextBox>
-                    <asp:TextBox ID="txtAddress" runat="server" placeholder="Address"></asp:TextBox>
-                    <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
-                    <asp:TextBox ID="txtContactNumber" runat="server" placeholder="Contact Number"></asp:TextBox>
-                    <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
-                    <asp:Button ID="btnAddCustomer" runat="server" Text="Add Customer" OnClick="btnAddCustomer_Click" CssClass="add-customer-button"/>
+                    <asp:Button runat="server" ID="btnShowAddCustomer" Text="Insert Customer" CssClass="insert-customer-button" OnClick="btnShowAddCustomer_Click" />
+                    <asp:Button runat="server" ID="btnShowUpdateCustomer" Text="Update Customer" CssClass="insert-customer-button" OnClick="btnShowUpdateCustomer_Click" />
+                    <asp:Panel runat="server" ID="AddPanel" class="add-customer" visible="false">
+                        <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name"></asp:TextBox>
+                        <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name"></asp:TextBox>
+                        <asp:TextBox ID="txtAddress" runat="server" placeholder="Address"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
+                        <asp:TextBox ID="txtContactNumber" runat="server" placeholder="Contact Number"></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                        <asp:Button ID="btnAddCustomer" runat="server" Text="Add Customer" OnClick="btnAddCustomer_Click" CssClass="add-customer-button"/>
+                    </asp:Panel>
+                    <asp:Panel runat="server" ID="UpdatePanel" class="add-customer" visible="false">
+                        <asp:Button ID="getCustomerData" runat="server" Text="Get Customer" CssClass="insert-customer-button"/>
+                        <asp:TextBox ID="getName" runat="server" placeholder="Search..."></asp:TextBox>
+                        <asp:TextBox ID="uFirstName" runat="server" placeholder="First Name"></asp:TextBox>
+                        <asp:TextBox ID="uLastName" runat="server" placeholder="Last Name"></asp:TextBox>
+                        <asp:TextBox ID="uAddress" runat="server" placeholder="Address"></asp:TextBox>
+                        <asp:TextBox ID="uEmail" runat="server" placeholder="Email"></asp:TextBox>
+                        <asp:TextBox ID="uContactNumber" runat="server" placeholder="Contact Number"></asp:TextBox>
+                        <asp:TextBox ID="uPassword" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                        <asp:Button ID="btnUpdateCustomer" runat="server" Text="Update Customer" CssClass="add-customer-button"/>
+                    </asp:Panel>
                 </div>
                 <div class="search-bar">
                     <asp:TextBox ID="Search" runat="server" placeholder="Search..."></asp:TextBox> <asp:Button ID="Button1" runat="server" Text="SEARCH" />
