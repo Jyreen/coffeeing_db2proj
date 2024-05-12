@@ -101,6 +101,20 @@
             width: 100%;
             margin-top: 20px; 
         }
+        .report-box-button {
+            background-color: #b37333;
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+            margin-top: 10px;
+        }
+
+        .report-box-button:hover {
+            background-color: #a2622c;
+        }
     </style>
 </head>
 <body>
@@ -126,14 +140,17 @@
                     <div class="report-box">
                         <h3>Total Customers</h3>
                         <p>100</p> <!-- Change this value dynamically -->
+                        <asp:Button ID="Button1" runat="server" CssClass="report-box-button" Text="Download" OnClick="Button1_Click" />
                     </div>
                     <div class="report-box">
                         <h3>Total Products</h3>
                         <p>50</p> <!-- Change this value dynamically -->
+                        <asp:Button ID="Button2" runat="server" CssClass="report-box-button" Text="Download"  OnClick="Button2_Click" />
                     </div>
                     <div class="report-box">
                         <h3>Total Orders</h3>
                         <p>200</p> <!-- Change this value dynamically -->
+                        <asp:Button ID="Button3" runat="server" CssClass="report-box-button" Text="Download" OnClick="Button3_Click" />
                     </div>
                 </div>
             </div>
