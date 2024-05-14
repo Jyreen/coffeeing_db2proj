@@ -126,7 +126,7 @@
                     <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
                     <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
                     <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
-                    <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Analytics</span></a></li>
+                    <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Reports</span></a></li>
                 </ul>
                 <div class="logout">
                     <a href="admin.aspx"><img src="../Images/icons8-logout-52.png" /></a>
@@ -140,17 +140,17 @@
                     <div class="report-box">
                         <h3>Total Customers</h3>
                         <p>100</p> <!-- Change this value dynamically -->
-                        <asp:Button ID="Button1" runat="server" CssClass="report-box-button" Text="Download" OnClick="Button1_Click" />
+                        <asp:Button ID="Button1" runat="server" CssClass="report-box-button" Text="Export to CSV" OnClick="Button1_Click" />
                     </div>
                     <div class="report-box">
                         <h3>Total Products</h3>
                         <p>50</p> <!-- Change this value dynamically -->
-                        <asp:Button ID="Button2" runat="server" CssClass="report-box-button" Text="Download"  OnClick="Button2_Click" />
+                        <asp:Button ID="Button2" runat="server" CssClass="report-box-button" Text="Export to CSV"  OnClick="Button2_Click" />
                     </div>
                     <div class="report-box">
                         <h3>Total Orders</h3>
                         <p>200</p> <!-- Change this value dynamically -->
-                        <asp:Button ID="Button3" runat="server" CssClass="report-box-button" Text="Download" OnClick="Button3_Click" />
+                        <asp:Button ID="Button3" runat="server" CssClass="report-box-button" Text="Export to CSV" OnClick="Button3_Click" />
                     </div>
                 </div>
             </div>

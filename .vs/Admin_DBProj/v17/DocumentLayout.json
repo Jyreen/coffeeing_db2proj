@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "D:\\coffeeing_db2proj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\analytics.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\analytics.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\analytics.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\analytics.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\accounts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\accounts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\admin\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\accounts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\admin\\accounts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\accounts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\orders.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\orders.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,45 +51,97 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "analytics.aspx.cs",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\analytics.aspx.cs",
+              "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\analytics.aspx.cs",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\analytics.aspx.cs",
+              "RelativeToolTip": "Admin_DBProj\\Admin\\analytics.aspx.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwCgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T15:41:39.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "products.aspx",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\products.aspx",
+              "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\products.aspx",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\products.aspx",
+              "RelativeToolTip": "Admin_DBProj\\Admin\\products.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-14T14:35:05.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "orders.aspx",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\orders.aspx",
+              "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\orders.aspx",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\orders.aspx",
+              "RelativeToolTip": "Admin_DBProj\\Admin\\orders.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-14T14:34:56.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "accounts.aspx",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\accounts.aspx",
+              "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\accounts.aspx",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\accounts.aspx",
+              "RelativeToolTip": "Admin_DBProj\\Admin\\accounts.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-14T14:34:32.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "analytics.aspx",
+              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\analytics.aspx",
+              "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\analytics.aspx",
+              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\analytics.aspx",
+              "RelativeToolTip": "Admin_DBProj\\Admin\\analytics.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-14T14:33:49.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "accounts.aspx.cs",
               "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\accounts.aspx.cs",
               "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\accounts.aspx.cs",
               "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\accounts.aspx.cs",
               "RelativeToolTip": "Admin_DBProj\\Admin\\accounts.aspx.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwDQAAABPAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwC8AAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-12T16:25:45.221Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Web.config",
-              "RelativeDocumentMoniker": "Admin_DBProj\\Web.config",
-              "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Web.config",
-              "RelativeToolTip": "Admin_DBProj\\Web.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-05-12T16:11:16.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "home.aspx.cs",
               "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\home.aspx.cs",
               "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\home.aspx.cs",
               "ToolTip": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\home.aspx.cs",
               "RelativeToolTip": "Admin_DBProj\\Admin\\home.aspx.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAUwFAAAAAJAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAkwEEAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-12T16:08:26.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "home.aspx",
               "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\home.aspx",
               "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\home.aspx",
