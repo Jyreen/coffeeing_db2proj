@@ -15,7 +15,10 @@ namespace Admin_DBProj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                BindGridView();
+            }
         }
 
         protected void btnShowAddCustomer_Click(object sender, EventArgs e)
@@ -84,6 +87,62 @@ namespace Admin_DBProj
         private void BindGridView()
         {
             ctl02.DataBind();
+        }
+
+        protected void getCustomerData_Click1(object sender, EventArgs e)
+        {
+            string searchInput = getName.Text.Trim();
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_GET_ACCOUNT_DETAILS", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@SEARCHINPUT", searchInput);
+
+                    con.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            uFirstName.Text = reader["FIRST NAME"].ToString();
+                            uLastName.Text = reader["LAST NAME"].ToString();
+                            uEmail.Text = reader["EMAIL"].ToString();
+                            uAddress.Text = reader["ADDRESS"].ToString();
+                            uContactNumber.Text = reader["CONTACT NUMBER"].ToString();
+                        }
+                        else
+                        {
+                            Response.Write("User not found'");
+                        }
+                    }
+                }
+            }
+        }
+
+        protected void btnUpdateCustomer_Click1(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_UPDATE_ACCOUNT", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@FIRSTNAME", uFirstName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@LASTNAME", uLastName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@EMAIL", uEmail.Text.Trim());
+                    cmd.Parameters.AddWithValue("@ADDRESS", uAddress.Text.Trim());
+                    cmd.Parameters.AddWithValue("@CONTACTNUMBER", uContactNumber.Text.Trim());
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            BindGridView();
         }
     }
 }

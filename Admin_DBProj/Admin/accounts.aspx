@@ -193,7 +193,7 @@
                         <asp:Button ID="btnAddCustomer" runat="server" Text="Add Customer" OnClick="btnAddCustomer_Click" CssClass="add-customer-button"/>
                     </asp:Panel>
                     <asp:Panel runat="server" ID="UpdatePanel" class="add-customer" visible="false">
-                        <asp:Button ID="getCustomerData" runat="server" Text="Get Customer" CssClass="insert-customer-button"/>
+                        <asp:Button ID="getCustomerData" runat="server" Text="Get Customer" CssClass="insert-customer-button" OnClick="getCustomerData_Click1" />
                         <asp:TextBox ID="getName" runat="server" placeholder="Search..."></asp:TextBox>
                         <asp:TextBox ID="uFirstName" runat="server" placeholder="First Name"></asp:TextBox>
                         <asp:TextBox ID="uLastName" runat="server" placeholder="Last Name"></asp:TextBox>
@@ -201,11 +201,8 @@
                         <asp:TextBox ID="uEmail" runat="server" placeholder="Email"></asp:TextBox>
                         <asp:TextBox ID="uContactNumber" runat="server" placeholder="Contact Number"></asp:TextBox>
                         <asp:TextBox ID="uPassword" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
-                        <asp:Button ID="btnUpdateCustomer" runat="server" Text="Update Customer" CssClass="add-customer-button"/>
+                        <asp:Button ID="btnUpdateCustomer" runat="server" Text="Update Customer" CssClass="add-customer-button" OnClick="btnUpdateCustomer_Click1" />
                     </asp:Panel>
-                </div>
-                <div class="search-bar">
-                    <asp:TextBox ID="Search" runat="server" placeholder="Search..."></asp:TextBox> <asp:Button ID="Button1" runat="server" Text="SEARCH" />
                 </div>
                 <div class="customer-list">
                     <h2>Customer List</h2>

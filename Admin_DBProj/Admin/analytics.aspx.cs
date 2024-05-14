@@ -22,7 +22,10 @@ namespace Admin_DBProj
             DateTime startDate = DateTime.Parse(txtStartDate.Text);
             DateTime endDate = DateTime.Parse(txtEndDate.Text);
 
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand("SP_TotalSales", connection))
                 {
@@ -46,7 +49,9 @@ namespace Admin_DBProj
             DateTime startDate = DateTime.Parse(txtStartDate.Text);
             DateTime endDate = DateTime.Parse(txtEndDate.Text);
 
-            using (SqlConnection con = new SqlConnection(ConnectionString))
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand("SP_TotalSales", con))
                 {

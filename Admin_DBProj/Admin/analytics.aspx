@@ -72,8 +72,6 @@
             font-size: 16px;
         }
         .report-form button {
-            width: calc(20% - 10px);
-            padding: 10px 20px;
             background-color: #b37333;
             color: #fff;
             border: none;
