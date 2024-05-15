@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\coffeeing_db2proj\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\admin\\accounts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\accounts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\analytics.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\analytics.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\admin\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\analytics.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\admin\\analytics.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\analytics.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\accounts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\accounts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\admin\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,11 +27,11 @@
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\accounts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\orders.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\admin\\orders.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\orders.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|d:\\coffeeing_db2proj\\admin_dbproj\\admin\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|D:\\coffeeing_db2proj\\admin_dbproj\\admin\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B4C139F7-83C4-45DD-AD40-A64A266C9158}|Admin_DBProj\\Admin_DBProj.csproj|solutionrelative:admin_dbproj\\admin\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "analytics.aspx.cs",
               "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\analytics.aspx.cs",
               "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\analytics.aspx.cs",
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "products.aspx",
               "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\products.aspx",
               "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\products.aspx",
@@ -89,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "accounts.aspx",
               "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\accounts.aspx",
               "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\accounts.aspx",
@@ -102,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "analytics.aspx",
               "DocumentMoniker": "D:\\coffeeing_db2proj\\Admin_DBProj\\Admin\\analytics.aspx",
               "RelativeDocumentMoniker": "Admin_DBProj\\Admin\\analytics.aspx",

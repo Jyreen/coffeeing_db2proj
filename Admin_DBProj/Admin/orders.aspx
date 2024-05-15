@@ -85,33 +85,36 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <ul>
-                <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
-                <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
-                <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
-                <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
-                <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Reports</span></a></li>
-            </ul>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
+                    <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
+                    <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
+                    <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
+                    <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Reports</span></a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="header">
+                    <h1>Coffeeing- Orders</h1>
+                </div>
+                <div class="table-container">
+                    <h3>Orders</h3>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ORDER_ID_PK" DataSourceID="SqlDataSource1">
+                        <Columns>
+                            <asp:BoundField DataField="ORDER_ID_PK" HeaderText="ORDER_ID_PK" ReadOnly="True" InsertVisible="False" SortExpression="ORDER_ID_PK"></asp:BoundField>
+                            <asp:BoundField DataField="ORDER_DATE" HeaderText="ORDER_DATE" SortExpression="ORDER_DATE"></asp:BoundField>
+                            <asp:BoundField DataField="ORDER_TOTAL" HeaderText="ORDER_TOTAL" SortExpression="ORDER_TOTAL"></asp:BoundField>
+                            <asp:BoundField DataField="ORDER_STATUS_DESCRIPTION" HeaderText="ORDER_STATUS_DESCRIPTION" SortExpression="ORDER_STATUS_DESCRIPTION"></asp:BoundField>
+                            <asp:BoundField DataField="ACC_NAME" HeaderText="ACC_NAME" ReadOnly="True" SortExpression="ACC_NAME"></asp:BoundField>
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SP_Orders_GV" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+                </div>
+            </div>
         </div>
-        <div class="content">
-             <div class="header">
-                 <h1>Coffeeing- Orders</h1>
-             </div>
-            <div class="table-container">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ORDER_ID_PK" DataSourceID="SqlDataSource1">
-                    <Columns>
-                        <asp:BoundField DataField="ORDER_ID_PK" HeaderText="ORDER_ID_PK" ReadOnly="True" InsertVisible="False" SortExpression="ORDER_ID_PK"></asp:BoundField>
-                        <asp:BoundField DataField="ORDER_DATE" HeaderText="ORDER_DATE" SortExpression="ORDER_DATE"></asp:BoundField>
-                        <asp:BoundField DataField="ORDER_TOTAL" HeaderText="ORDER_TOTAL" SortExpression="ORDER_TOTAL"></asp:BoundField>
-                        <asp:BoundField DataField="ORDER_STATUS_DESCRIPTION" HeaderText="ORDER_STATUS_DESCRIPTION" SortExpression="ORDER_STATUS_DESCRIPTION"></asp:BoundField>
-                        <asp:BoundField DataField="ACC_NAME" HeaderText="ACC_NAME" ReadOnly="True" SortExpression="ACC_NAME"></asp:BoundField>
-                    </Columns>
-                </asp:GridView>
-                <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SP_Orders_GV" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-           </div>
-        </div>
-    </div>
+    </form>
 </body>
 </html>

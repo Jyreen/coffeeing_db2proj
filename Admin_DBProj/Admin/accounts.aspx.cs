@@ -136,6 +136,7 @@ namespace Admin_DBProj
                     cmd.Parameters.AddWithValue("@EMAIL", uEmail.Text.Trim());
                     cmd.Parameters.AddWithValue("@ADDRESS", uAddress.Text.Trim());
                     cmd.Parameters.AddWithValue("@CONTACTNUMBER", uContactNumber.Text.Trim());
+                    cmd.Parameters.AddWithValue("@STATUS", ddlStatus.SelectedValue);
 
                     con.Open();
                     cmd.ExecuteNonQuery();

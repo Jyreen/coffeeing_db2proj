@@ -201,6 +201,10 @@
                         <asp:TextBox ID="uEmail" runat="server" placeholder="Email"></asp:TextBox>
                         <asp:TextBox ID="uContactNumber" runat="server" placeholder="Contact Number"></asp:TextBox>
                         <asp:TextBox ID="uPassword" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                        <asp:DropDownList ID="ddlStatus" runat="server">
+                            <asp:ListItem Value="1">Active</asp:ListItem>
+                            <asp:ListItem Value="0">Inactive</asp:ListItem>
+                        </asp:DropDownList>
                         <asp:Button ID="btnUpdateCustomer" runat="server" Text="Update Customer" CssClass="add-customer-button" OnClick="btnUpdateCustomer_Click1" />
                     </asp:Panel>
                 </div>
@@ -212,12 +216,7 @@
                             <asp:BoundField DataField="ACC_EMAIL" HeaderText="EMAIL" SortExpression="ACC_EMAIL"></asp:BoundField>
                             <asp:BoundField DataField="ACC_ADDRESS" HeaderText="ADDRESS" SortExpression="ACC_ADDRESS"></asp:BoundField>
                             <asp:BoundField DataField="ACC_PNUM" HeaderText="CONTACT NUMBER" SortExpression="ACC_PNUM"></asp:BoundField>
-                            <asp:TemplateField HeaderText=" ">
-                            <ItemTemplate>
-                                <asp:Button ID="btnEdit" runat="server" Text="Edit" CommandName="Edit" CommandArgument='<%# Container.DataItemIndex %>' CssClass="action-button" />
-                                <asp:Button ID="btnDeactivate" runat="server" Text="Deactivate" CommandName="Deactivate" CommandArgument='<%# Container.DataItemIndex %>' CssClass="action-button" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
+                            <asp:BoundField DataField="ACC_STATUS" HeaderText="STATUS" SortExpression="ACC_STATUS"></asp:BoundField>
                         </Columns>
                     </asp:GridView>
                     <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SP_Customers_GV" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
