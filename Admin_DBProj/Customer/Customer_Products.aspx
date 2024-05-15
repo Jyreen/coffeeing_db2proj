@@ -64,8 +64,8 @@
                                 <div class="menu-item-price"><%= product.PRODUCT_PRICE %></div>
                             </div>
                             <div class="quantity-and-cart">
-                                <input type="number" class="quantity-input" value="1" min="1">
-                                <button class="add-to-cart-button" onclick="addToCart('<%= product.PRODUCT_NAME %>', '<%= product.PRODUCT_PRICE %>', 1)">Add to Cart</button>
+                                <input type="number" class="quantity-input" value="1" min="1" id="quantity_<%= product.PRODUCT_NAME %>">
+                                <a class="add-to-cart-button" href="#" onclick="addToCart('<%= product.PRODUCT_NAME %>'); return false;">Add to Cart</a>
                             </div>
                         </div>
                     <% } %>
@@ -73,5 +73,11 @@
             </div>
     </section>
     </form>
+    <script>
+        function addToCart(productName) {
+            const quantity = document.getElementById(`quantity_${productName}`).value;
+            window.location.href = `Customer_Cart.aspx?productName=${productName}&quantity=${quantity}`;
+        }
+    </script>
 </body>
 </html>

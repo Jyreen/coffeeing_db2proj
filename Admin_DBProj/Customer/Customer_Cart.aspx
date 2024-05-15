@@ -38,59 +38,45 @@
                     </div>
                 </div>
                 <div class="cart-grid">
-                    <!-- Cart items -->
-                    <div class="cart-item">
-                        <img src="path/to/image1.jpg" alt="Product 1">
-                        <div class="cart-item-details">
-                            <div class="cart-item-name">Product 1</div>
-                            <div class="cart-item-description">Description of Product 1</div>
-                            <div class="cart-item-price">$10.99</div>
+                    <% foreach (var cartItem in CartItems) { %>
+                        <div class="cart-item">
+                            <img src="<%= cartItem.ProductImg %>" alt="<%= cartItem.ProductName %>">
+                            <div class="cart-item-details">
+                                <div class="cart-item-name"><%= cartItem.ProductName %></div>
+                                <div class="cart-item-description"><%= cartItem.ProductDesc %></div>
+                                <div class="cart-item-price">$<%= cartItem.ProductPrice.ToString("0.00") %></div>
+                            </div>
+                            <div class="quantity-and-remove">
+                                <input type="number" class="quantity-input" value="<%= cartItem.Quantity %>" min="1" data-product-name="<%= cartItem.ProductName %>">
+                                <button class="remove-from-cart-button" onclick="removeFromCart('<%= cartItem.ProductName %>')">Remove</button>
+                            </div>
                         </div>
-                        <div class="quantity-and-remove">
-                            <input type="number" class="quantity-input" value="1" min="1">
-                            <button class="remove-from-cart-button">Remove</button>
-                        </div>
-                    </div>
+                    <% } %>
+                </div>
 
-                    <div class="cart-item">
-                        <img src="path/to/image2.jpg" alt="Product 2">
-                        <div class="cart-item-details">
-                            <div class="cart-item-name">Product 2</div>
-                            <div class="cart-item-description">Description of Product 2</div>
-                            <div class="cart-item-price">$15.99</div>
-                        </div>
-                        <div class="quantity-and-remove">
-                            <input type="number" class="quantity-input" value="1" min="1">
-                            <button class="remove-from-cart-button">Remove</button>
-                        </div>
+                <div class="totals">
+                    <div class="totals-item">
+                        <label>Subtotal</label>
+                        <div class="totals-value" id="cart-subtotal"><%= Subtotal.ToString("0.00") %></div>
+                    </div>
+                    <div class="totals-item">
+                        <label>Tax (5%)</label>
+                        <div class="totals-value" id="cart-tax"><%= Tax.ToString("0.00") %></div>
+                    </div>
+                    <div class="totals-item">
+                        <label>Shipping</label>
+                        <div class="totals-value" id="cart-shipping"><%= Shipping.ToString("0.00") %></div>
+                    </div>
+                    <div class="totals-item totals-item-total">
+                        <label>Grand Total</label>
+                        <div class="totals-value" id="cart-total"><%= GrandTotal.ToString("0.00") %></div>
                     </div>
                 </div>
-                <!-- Add more cart items as needed -->
-            </div>
-
-            <div class="totals">
-                <div class="totals-item">
-                    <label>Subtotal</label>
-                    <div class="totals-value" id="cart-subtotal">71.97</div>
+                <div class="button-container text-center">
+                    <button class="checkout">Checkout</button>
+                    <button class="cancel">Cancel</button>
                 </div>
-                <div class="totals-item">
-                    <label>Tax (5%)</label>
-                    <div class="totals-value" id="cart-tax">3.60</div>
-                </div>
-                <div class="totals-item">
-                    <label>Shipping</label>
-                    <div class="totals-value" id="cart-shipping">15.00</div>
-                </div>
-                <div class="totals-item totals-item-total">
-                    <label>Grand Total</label>
-                    <div class="totals-value" id="cart-total">90.57</div>
-                </div>
-            </div>
-            <div class="button-container text-center">
-        <button  class="checkout">Checkout</button>
-        <button  class="cancel">Cancel</button>
-    </div>
-     </section>
+        </section>
     </form>
     <script src="js/cart.js"></script>
 </body>
