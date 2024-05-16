@@ -1,0 +1,128 @@
+﻿/* Global Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #C2A375;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    padding-top: 70px; /* Add padding-top for fixed header */
+}
+
+/* Header (Task Bar) Styles */
+header {
+    background-color: #C2A375;
+    padding: 10px 20px; /* Adjust padding for header */
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Align items in header */
+    align-items: center; /* Center vertically */
+    position: fixed; /* Fixed position */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid #000;
+}
+
+.logo {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+    .logo a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+        .logo a:hover {
+            color: #fff;
+        }
+
+    .logo img {
+        width: 40px;
+        margin-right: 10px;
+    }
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+/* Checkout Form Styles */
+.confirm-order {
+    padding-top: 70px; /* Adjust padding-top to account for fixed header */
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    color: #aaa;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.btn-confirm,
+.cancel {
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 9px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn-confirm {
+    background-color: #3c2a04;
+    color: #fff;
+}
+
+    .btn-confirm:hover {
+        background-color: #e6bb00;
+    }
+
+.cancel {
+    background-color: #5c5959;
+    color: #fff;
+}
+
+    .cancel:hover {
+        background-color: #888;
+    }
