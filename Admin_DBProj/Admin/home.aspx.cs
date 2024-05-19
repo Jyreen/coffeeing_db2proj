@@ -24,7 +24,7 @@ namespace Admin_DBProj
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM {tableName}"))
+                using (SqlCommand cmd = new SqlCommand($"SELECT * FROM {tableName}", con))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter())
                     {
@@ -52,9 +52,10 @@ namespace Admin_DBProj
 
                                 csv += "\r\n";
                             }
+
                             Response.Clear();
                             Response.Buffer = true;
-                            Response.AddHeader("content-disposition", "attachment;filename={tableName}Export.csv");
+                            Response.AddHeader("content-disposition", $"attachment;filename={tableName}Export.csv"); // Here we correctly concatenate/interpolate the tableName variable
                             Response.Charset = "";
                             Response.ContentType = "application/text";
                             Response.Output.Write(csv);

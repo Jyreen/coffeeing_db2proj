@@ -62,6 +62,9 @@
             border-radius: 5px;
             padding: 20px;
             margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .product-form input[type="text"],
         .product-form select {
@@ -96,7 +99,7 @@
             width: 100%;
             border-collapse: collapse;
         }
-         .product-form-button {
+        .product-form-button {
             width: 100%;
             background-color: #b37333;
             color: #fff;
@@ -124,6 +127,21 @@
         .product-list tr:hover {
             background-color: #f2f2f2;
         }
+        .insert-product-button {
+            width: calc(20% - 10px);
+            padding: 10px 20px;
+            background-color: #b37333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+        .insert-product-button:hover {
+            background-color: #955f28;
+        }
     </style>
 </head>
 <body>
@@ -131,53 +149,69 @@
         <div class="container">
             <div class="sidebar">
                 <ul>
-                    <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
-                    <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
-                    <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
-                    <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
-                    <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Reports</span></a></li>
-                </ul>
+    <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
+    <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
+    <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
+    <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
+    <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Reports</span></a></li>
+</ul>
             </div>
             <div class="content">
                 <div class="header">
-                    <h1>Coffeeing- Products</h1>
+                    <h1>Coffeeing - Products</h1>
                 </div>
                 <div class="product-form">
-                    <asp:TextBox ID="txtName" runat="server" placeholder="Name"></asp:TextBox>
-                    <asp:TextBox ID="txtDesc" runat="server" placeholder="Description"></asp:TextBox>
-                    <asp:TextBox ID="txtPrice" runat="server" placeholder="Price"></asp:TextBox>
-                     <asp:DropDownList ID="DropDownList2" runat="server" placeholder="Category">
-                        <asp:ListItem Text="Donut" Value="Donut"></asp:ListItem>
-                        <asp:ListItem Text="Coffee" Value="Coffee"></asp:ListItem>
-                     </asp:DropDownList>
+                    <asp:Button runat="server" ID="btnShowAddProduct" Text="Insert Product" CssClass="insert-product-button" OnClick="btnShowAddProduct_Click" />
+                    <asp:Button runat="server" ID="btnShowUpdateProduct" Text="Update Product" CssClass="insert-product-button" OnClick="btnShowUpdateProduct_Click" />
+                    <asp:Panel runat="server" ID="AddPanel" CssClass="add-product" Visible="false">
+                        <asp:TextBox ID="txtName" runat="server" placeholder="Name"></asp:TextBox>
+                        <asp:TextBox ID="txtDesc" runat="server" placeholder="Description"></asp:TextBox>
+                        <asp:TextBox ID="txtPrice" runat="server" placeholder="Price"></asp:TextBox>
+                        <asp:TextBox ID="txtQuantity" runat="server" placeholder="Quantity"></asp:TextBox>
+                        <asp:DropDownList ID="ddlCategory" runat="server">
+                            <asp:ListItem Text="Donut" Value="Donut"></asp:ListItem>
+                            <asp:ListItem Text="Coffee" Value="Coffee"></asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:DropDownList ID="ddlStatus" runat="server">
+                            <asp:ListItem Text="Available" Value="Available"></asp:ListItem>
+                            <asp:ListItem Text="Unavailable" Value="Unavailable"></asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:Button ID="btnAddProduct" runat="server" Text="Add Product" CssClass="insert-product-button" OnClick="btnAddProduct_Click" />
+                    </asp:Panel>
 
-                    <asp:DropDownList ID="DropDownList1" runat="server" placeholder="Status">
-                        <asp:ListItem Text="Available" Value="Available"></asp:ListItem>
-                        <asp:ListItem Text="Unavailable" Value="Unavailax`ble"></asp:ListItem>
-                    </asp:DropDownList>
-                    <asp:Button ID="Button1" runat="server" Text="Add Product" CssClass="product-form-button" OnClick="btnAddProduct_Click" />
+                    <asp:Panel runat="server" ID="UpdateProductPanel" CssClass="update-product" Visible="false">
+                        <asp:Button ID="getProductData" runat="server" Text="Get Product"  OnClick="getProductData_Click" CssClass="insert-product-button"  />
+                        <asp:TextBox ID="getName" runat="server" placeholder="Search..." OnTextChanged="getName_TextChanged" AutoPostBack="true"></asp:TextBox>
+                        <asp:TextBox ID="uName" runat="server" placeholder="Name"></asp:TextBox>
+                        <asp:TextBox ID="uDesc" runat="server" placeholder="Description"></asp:TextBox>
+                        <asp:TextBox ID="uPrice" runat="server" placeholder="Price"></asp:TextBox>
+                        <asp:TextBox ID="uQuantity" runat="server" placeholder="Quantity"></asp:TextBox>
+                        <asp:DropDownList ID="uCategory" runat="server">
+                            <asp:ListItem Text="Donut" Value="Donut"></asp:ListItem>
+                            <asp:ListItem Text="Coffee" Value="Coffee"></asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:DropDownList ID="uStatus" runat="server">
+                            <asp:ListItem Text="Available" Value="Available"></asp:ListItem>
+                            <asp:ListItem Text="Unavailable" Value="Unavailable"></asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:Button ID="btnUpdateProduct" runat="server" Text="Update Product"  CssClass="insert-product-button" OnClick="btnUpdateProduct_Click"  />
+                    </asp:Panel>    
                 </div>
                 <div class="product-list">
                     <h2>Product List</h2>
                     <asp:GridView ID="prod" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
-                        <Columns>
-                            <asp:BoundField DataField="PRODUCT_NAME" HeaderText="NAME" SortExpression="PRODUCT_NAME"></asp:BoundField>
-                            <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
-                            <asp:BoundField DataField="PRODUCT_QUANTITY" HeaderText="QUANTITY" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
-                            <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRICE" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
-                            <asp:BoundField DataField="PRODUCT_STATUS" HeaderText="STATUS" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
-                            <asp:TemplateField HeaderText=" ">
-                                <ItemTemplate>
-                                    <asp:Button ID="btnEdit" runat="server" Text="Edit" CommandName="Edit" />
-                                    <asp:Button ID="btnDeactivate" runat="server" Text="Deactivate" CommandName="Deactivate" />
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                        </Columns>
+                          <Columns>
+                              <asp:BoundField DataField="PRODUCT_NAME" HeaderText="NAME" ReadOnly="True" SortExpression="PRODUCT_NAME"></asp:BoundField>
+                              <asp:BoundField DataField="PRODUCT_DESC" HeaderText="DESCRIPTION" SortExpression="PRODUCT_DESC"></asp:BoundField>
+                              <asp:BoundField DataField="PRODUCT_QUANTITY" HeaderText="QUANTITY" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
+                              <asp:BoundField DataField="PRODUCT_STATUS" HeaderText="STATUS" SortExpression="PRODUCT_STATUS"></asp:BoundField>
+                              <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
+                          </Columns>
                     </asp:GridView>
                     <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SP_Products_GV" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                 </div>
             </div>
         </div>
-    </form>>
+    </form>
 </body>
 </html>

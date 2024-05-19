@@ -7,6 +7,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.Common;
+
 
 namespace Admin_DBProj
 {
@@ -16,9 +18,18 @@ namespace Admin_DBProj
         {
             if (!IsPostBack)
             {
-                // Bind the GridView on initial page load
                 BindGridView();
+
+                AddPanel.Visible = false;
+                UpdateProductPanel.Visible = false;
             }
+        }
+        private void ClearInputBoxes()
+        {
+            txtName.Text = "";
+            txtDesc.Text = "";
+            txtPrice.Text = "";
+            txtQuantity.Text = "";
         }
 
         protected void btnAddProduct_Click(object sender, EventArgs e)
@@ -26,12 +37,13 @@ namespace Admin_DBProj
             string name = txtName.Text;
             string description = txtDesc.Text;
             string price = txtPrice.Text;
+            
 
             // Assuming category 1 is for donuts and category 2 is for coffee
             int categoryId = 0; // Default to 0 in case no category is selected
-            if (DropDownList2.SelectedItem != null)
+            if (ddlCategory.SelectedItem != null)
             {
-                string selectedCategory = DropDownList1.SelectedItem.Value;
+                string selectedCategory = ddlCategory.SelectedItem.Value;
                 if (selectedCategory == "Donut")
                 {
                     categoryId = 1; // Category 1 is for donuts
@@ -54,18 +66,19 @@ namespace Admin_DBProj
                     command.Parameters.AddWithValue("@PRODUCT_DESC", description);
                     command.Parameters.AddWithValue("@PRODUCT_PRICE", price);
                     command.Parameters.AddWithValue("@CATEGORY_ID", categoryId); // Pass the category ID
+                   
 
                     try
                     {
                         connection.Open();
                         int productId = Convert.ToInt32(command.ExecuteScalar());
 
-                        // Refresh the GridView after adding the product
+                      
                         BindGridView();
-                        // Clear the input fields after adding the product
+                      
                         ClearInputBoxes();
 
-                        Response.Write("Product added successfully with ID: " + productId);
+                        Response.Write("Product added successfully");
                     }
                     catch (Exception ex)
                     {
@@ -75,18 +88,129 @@ namespace Admin_DBProj
             }
         }
 
-        private void ClearInputBoxes()
+
+        protected void btnShowAddProduct_Click(object sender, EventArgs e)
         {
-            txtName.Text = "";
-            txtDesc.Text = "";
-            txtPrice.Text = "";
-            // Clear any other input fields you may have
+            AddPanel.Visible = !AddPanel.Visible;
+            UpdateProductPanel.Visible = false;
+        }
+        protected void btnShowUpdateProduct_Click(object sender, EventArgs e)
+        {
+            UpdateProductPanel.Visible = !UpdateProductPanel.Visible;
+            AddPanel.Visible = false;
+        }
+        protected void getName_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = getName.Text.Trim();
+
+   
+            Response.Write($"You entered: {searchText}");
+        }
+        protected void ClearUpdateFields()
+        {
+            uName.Text = "";
+            uDesc.Text = "";
+            uPrice.Text = "";
+            uQuantity.Text = "";
+            uCategory.ClearSelection();
+            uStatus.ClearSelection();
         }
 
+
+        protected void getProductData_Click(object sender, EventArgs e)
+        {
+            string searchInput = getName.Text.Trim();
+
+            if (string.IsNullOrEmpty(searchInput))
+            {
+                Response.Write("Please provide a valid product ID or name.");
+                return;
+            }
+
+
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("SP_GET_PDETAILS", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    // Add the parameter @SEARCHINPUT to the command
+                    command.Parameters.AddWithValue("@SEARCHINPUT", searchInput);
+
+
+                    try
+
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            uName.Text = reader["PRODUCT_NAME"].ToString();
+                            uDesc.Text = reader["PRODUCT_DESC"].ToString();
+                            uPrice.Text = reader["PRODUCT_PRICE"].ToString();
+                            uQuantity.Text = reader["PRODUCT_QUANTITY"].ToString();
+                            uCategory.SelectedValue = reader["CATEGORY_ID"].ToString();
+
+                            // Populate the status dropdown list
+                            string productStatus = reader["PRODUCT_STATUS"].ToString();
+                            if (productStatus == "Available")
+                            {
+                                uStatus.SelectedValue = "Available";
+                            }
+                            else if (productStatus == "Unavailable")
+                            {
+                                uStatus.SelectedValue = "Unavailable";
+                            }
+                            else
+                            {
+                                Response.Write("<script>alert('Product found.');</script>");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Write("<script>alert('An error occurred: " + ex.Message + "');</script>");
+
+                    }
+                }
+            }
+        }
         private void BindGridView()
         {
-            // Assuming GridView1 is the ID of your GridView
             prod.DataBind();
+        }
+
+
+        protected void btnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("SP_UPDATE_PRODUCT", con))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@PRODUCT_NAME", uName.Text.Trim());
+                    command.Parameters.AddWithValue("@PRODUCT_DESC", uDesc.Text.Trim());
+                    command.Parameters.AddWithValue("@PRODUCT_PRICE", uPrice.Text.Trim());
+                    command.Parameters.AddWithValue("@PRODUCT_QUANTITY", uQuantity.Text.Trim());
+                    command.Parameters.AddWithValue("@PRODUCT_CATEGORY", ddlCategory.SelectedItem.Value);
+                    command.Parameters.AddWithValue("@PRODUCT_STATUS", ddlStatus.SelectedValue);
+
+                    try
+                    {
+                        con.Open();
+                        command.ExecuteNonQuery();
+                        
+                        string script = "<script type=\"text/javascript\">alert('Product updated successfully!');</script>";
+                        Response.Write(script);
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Write("An error occurred: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }

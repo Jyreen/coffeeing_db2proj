@@ -65,11 +65,13 @@ namespace Admin_DBProj
                         // Clear the input fields after adding the customer
                         ClearInputBoxes();
 
-                        Response.Write("Customer added successfully!");
+                        string script = "<script type=\"text/javascript\">alert('User added successfully!');</script>";
+                        Response.Write(script);
                     }
                     catch (Exception ex)
                     {
-                        Response.Write("An error occurred: " + ex.Message);
+                        string error = "<script type=\"text/javascript\">alert('An error occurred:');</script>";
+                        Response.Write(error + ex.Message);
                     }
                 }
             }
@@ -115,7 +117,8 @@ namespace Admin_DBProj
                         }
                         else
                         {
-                            Response.Write("User not found'");
+                            string script = "<script type=\"text/javascript\">alert('User not found!');</script>";
+                            Response.Write(script);
                         }
                     }
                 }
@@ -140,8 +143,12 @@ namespace Admin_DBProj
 
                     con.Open();
                     cmd.ExecuteNonQuery();
+
                 }
             }
+
+            string script = "<script type=\"text/javascript\">alert('User updated successfully!');</script>";
+            Response.Write(script);
 
             BindGridView();
         }
