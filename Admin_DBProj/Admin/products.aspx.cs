@@ -195,8 +195,8 @@ namespace Admin_DBProj
                     command.Parameters.AddWithValue("@PRODUCT_DESC", uDesc.Text.Trim());
                     command.Parameters.AddWithValue("@PRODUCT_PRICE", uPrice.Text.Trim());
                     command.Parameters.AddWithValue("@PRODUCT_QUANTITY", uQuantity.Text.Trim());
-                    command.Parameters.AddWithValue("@PRODUCT_CATEGORY", ddlCategory.SelectedItem);
-                    command.Parameters.AddWithValue("@PRODUCT_STATUS", ddlStatus.SelectedValue);
+                    command.Parameters.AddWithValue("@PRODUCT_CATEGORY", Convert.ToInt32(ddlCategory.SelectedValue));
+                    command.Parameters.AddWithValue("@PRODUCT_STATUS", Convert.ToInt32(ddlStatus.SelectedValue));
 
                     try
                     {
