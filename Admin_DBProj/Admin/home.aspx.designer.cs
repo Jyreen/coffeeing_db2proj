@@ -15,6 +15,15 @@ namespace Admin_DBProj
     {
 
         /// <summary>
+        /// totalCustomers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label totalCustomers;
+
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
@@ -24,6 +33,15 @@ namespace Admin_DBProj
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
+        /// totalProducts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label totalProducts;
+
+        /// <summary>
         /// Button2 control.
         /// </summary>
         /// <remarks>
@@ -31,6 +49,15 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button2;
+
+        /// <summary>
+        /// totalOrders control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label totalOrders;
 
         /// <summary>
         /// Button3 control.

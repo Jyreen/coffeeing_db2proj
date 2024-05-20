@@ -23,36 +23,36 @@ namespace Admin_DBProj
 
         protected void SetReportValues()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["YourConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 // Count for Customers
-                string customerQuery = "SELECT COUNT(*) FROM Customers";
+                string customerQuery = "SELECT COUNT(*) FROM ACCOUNT";
                 int customerCount = 0;
                 using (SqlCommand command = new SqlCommand(customerQuery, connection))
                 {
                     connection.Open();
                     customerCount = (int)command.ExecuteScalar();
                 }
-                totalCustomers.InnerText = customerCount.ToString();
+                totalCustomers.Text = customerCount.ToString();
 
                 // Count for Products
-                string productQuery = "SELECT COUNT(*) FROM Products";
+                string productQuery = "SELECT COUNT(*) FROM PRODUCT";
                 int productCount = 0;
                 using (SqlCommand command = new SqlCommand(productQuery, connection))
                 {
                     productCount = (int)command.ExecuteScalar();
                 }
-                totalProducts.InnerText = productCount.ToString();
+                totalProducts.Text = productCount.ToString();
 
                 // Count for Orders
-                string orderQuery = "SELECT COUNT(*) FROM Orders";
+                string orderQuery = "SELECT COUNT(*) FROM [ORDER]";
                 int orderCount = 0;
                 using (SqlCommand command = new SqlCommand(orderQuery, connection))
                 {
                     orderCount = (int)command.ExecuteScalar();
                 }
-                totalOrders.InnerText = orderCount.ToString();
+                totalOrders.Text = orderCount.ToString();
             }
         }
 
