@@ -94,6 +94,13 @@ namespace Admin_DBProj
         protected void getCustomerData_Click1(object sender, EventArgs e)
         {
             string searchInput = getName.Text.Trim();
+            if (string.IsNullOrEmpty(searchInput))
+            {
+                Response.Write("<script>alert('Input boxes cannot be empty.');</script>");
+                return;
+            }
+
+
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
             using (SqlConnection con = new SqlConnection(connectionString))

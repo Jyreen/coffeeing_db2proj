@@ -37,20 +37,20 @@ namespace Admin_DBProj
             string name = txtName.Text;
             string description = txtDesc.Text;
             string price = txtPrice.Text;
-            
+            string quantity = txtQuantity.Text;
 
-            // Assuming category 1 is for donuts and category 2 is for coffee
-            int categoryId = 0; // Default to 0 in case no category is selected
+
+            int categoryId = 0;
             if (ddlCategory.SelectedItem != null)
             {
                 string selectedCategory = ddlCategory.SelectedItem.Value;
                 if (selectedCategory == "Donut")
                 {
-                    categoryId = 1; // Category 1 is for donuts
+                    categoryId = 0; // Category 1 is for donuts
                 }
                 else if (selectedCategory == "Coffee")
                 {
-                    categoryId = 2; // Category 2 is for coffee
+                    categoryId = 1; // Category 2 is for coffee
                 }
             }
 
@@ -65,6 +65,7 @@ namespace Admin_DBProj
                     command.Parameters.AddWithValue("@PRODUCT_NAME", name);
                     command.Parameters.AddWithValue("@PRODUCT_DESC", description);
                     command.Parameters.AddWithValue("@PRODUCT_PRICE", price);
+                    command.Parameters.AddWithValue("@PRODUCT_QUANTITY", quantity);
                     command.Parameters.AddWithValue("@CATEGORY_ID", categoryId); // Pass the category ID
                    
 
@@ -78,7 +79,7 @@ namespace Admin_DBProj
                       
                         ClearInputBoxes();
 
-                        Response.Write("Product added successfully");
+                        Response.Write("<script>alert('Product added successfully.');</script>");
                     }
                     catch (Exception ex)
                     {
@@ -120,10 +121,9 @@ namespace Admin_DBProj
         protected void getProductData_Click(object sender, EventArgs e)
         {
             string searchInput = getName.Text.Trim();
-
             if (string.IsNullOrEmpty(searchInput))
             {
-                Response.Write("Please provide a valid product ID or name.");
+                Response.Write("<script>alert('Input boxes cannot be empty.');</script>");
                 return;
             }
 
@@ -134,7 +134,6 @@ namespace Admin_DBProj
                 using (SqlCommand command = new SqlCommand("SP_GET_PDETAILS", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    // Add the parameter @SEARCHINPUT to the command
                     command.Parameters.AddWithValue("@SEARCHINPUT", searchInput);
 
 
@@ -183,6 +182,8 @@ namespace Admin_DBProj
 
         protected void btnUpdateProduct_Click(object sender, EventArgs e)
         {
+
+
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -194,20 +195,20 @@ namespace Admin_DBProj
                     command.Parameters.AddWithValue("@PRODUCT_DESC", uDesc.Text.Trim());
                     command.Parameters.AddWithValue("@PRODUCT_PRICE", uPrice.Text.Trim());
                     command.Parameters.AddWithValue("@PRODUCT_QUANTITY", uQuantity.Text.Trim());
-                    command.Parameters.AddWithValue("@PRODUCT_CATEGORY", ddlCategory.SelectedItem.Value);
+                    command.Parameters.AddWithValue("@PRODUCT_CATEGORY", ddlCategory.SelectedItem);
                     command.Parameters.AddWithValue("@PRODUCT_STATUS", ddlStatus.SelectedValue);
 
                     try
                     {
                         con.Open();
                         command.ExecuteNonQuery();
-                        
-                        string script = "<script type=\"text/javascript\">alert('Product updated successfully!');</script>";
-                        Response.Write(script);
+
+                        Response.Write("<script>alert('Product updated successfully.');</script>");
                     }
                     catch (Exception ex)
                     {
-                        Response.Write("An error occurred: " + ex.Message);
+                        string error = $"<script type=\"text/javascript\">alert('An error occurred: {ex.Message}');</script>";
+                        Response.Write(error);
                     }
                 }
             }

@@ -182,6 +182,7 @@
                     <asp:Panel runat="server" ID="UpdateProductPanel" CssClass="update-product" Visible="false">
                         <asp:Button ID="getProductData" runat="server" Text="Get Product"  OnClick="getProductData_Click" CssClass="insert-product-button"  />
                         <asp:TextBox ID="getName" runat="server" placeholder="Search..." OnTextChanged="getName_TextChanged" AutoPostBack="true"></asp:TextBox>
+                        <asp:HiddenField ID="hfProductId" runat="server" />
                         <asp:TextBox ID="uName" runat="server" placeholder="Name"></asp:TextBox>
                         <asp:TextBox ID="uDesc" runat="server" placeholder="Description"></asp:TextBox>
                         <asp:TextBox ID="uPrice" runat="server" placeholder="Price"></asp:TextBox>

@@ -132,6 +132,15 @@ namespace Admin_DBProj
         protected global::System.Web.UI.WebControls.TextBox getName;
 
         /// <summary>
+        /// hfProductId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfProductId;
+
+        /// <summary>
         /// uName control.
         /// </summary>
         /// <remarks>
