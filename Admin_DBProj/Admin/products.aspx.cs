@@ -182,8 +182,6 @@ namespace Admin_DBProj
 
         protected void btnUpdateProduct_Click(object sender, EventArgs e)
         {
-
-
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -193,25 +191,71 @@ namespace Admin_DBProj
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@PRODUCT_NAME", uName.Text.Trim());
                     command.Parameters.AddWithValue("@PRODUCT_DESC", uDesc.Text.Trim());
-                    command.Parameters.AddWithValue("@PRODUCT_PRICE", uPrice.Text.Trim());
-                    command.Parameters.AddWithValue("@PRODUCT_QUANTITY", uQuantity.Text.Trim());
-                    command.Parameters.AddWithValue("@PRODUCT_CATEGORY", Convert.ToInt32(ddlCategory.SelectedValue));
-                    command.Parameters.AddWithValue("@PRODUCT_STATUS", Convert.ToInt32(ddlStatus.SelectedValue));
+
+                    // Validate and convert the price
+                    decimal priceValue;
+                    if (decimal.TryParse(uPrice.Text.Trim(), out priceValue))
+                    {
+                        command.Parameters.AddWithValue("@PRODUCT_PRICE", priceValue);
+                    }
+                    else
+                    {
+                        Response.Write("Invalid price value.");
+                        return;
+                    }
+
+                    // Validate and convert the quantity
+                    int quantityValue;
+                    if (int.TryParse(uQuantity.Text.Trim(), out quantityValue))
+                    {
+                        command.Parameters.AddWithValue("@PRODUCT_QUANTITY", quantityValue);
+                    }
+                    else
+                    {
+                        Response.Write("Invalid quantity value.");
+                        return;
+                    }
+
+                   
+                    int categoryValue;
+                    if (uCategory.SelectedValue == "1" || uCategory.SelectedValue == "0")
+                    {
+                        categoryValue = int.Parse(uCategory.SelectedValue);
+                        command.Parameters.AddWithValue("@PRODUCT_CATEGORY", categoryValue);
+                    }
+                    else
+                    {
+                        Response.Write("Invalid category value.");
+                        return;
+                    }
+
+                    // Validate and convert the status value
+                    int statusValue;
+                    if (uStatus.SelectedValue == "1" || uStatus.SelectedValue == "0")
+                    {
+                        statusValue = int.Parse(uStatus.SelectedValue);
+                        command.Parameters.AddWithValue("@PRODUCT_STATUS", statusValue);
+                    }
+                    else
+                    {
+                        Response.Write("Invalid status value.");
+                        return;
+                    }
 
                     try
                     {
                         con.Open();
                         command.ExecuteNonQuery();
-
-                        Response.Write("<script>alert('Product updated successfully.');</script>");
+                        string script = "<script type=\"text/javascript\">alert('Product updated successfully!');</script>";
+                        Response.Write(script);
                     }
                     catch (Exception ex)
                     {
-                        string error = $"<script type=\"text/javascript\">alert('An error occurred: {ex.Message}');</script>";
-                        Response.Write(error);
+                        Response.Write("An error occurred: " + ex.Message);
                     }
                 }
             }
         }
+
     }
 }

@@ -139,17 +139,17 @@
                 <div class="report">
                     <div class="report-box">
                         <h3>Total Customers</h3>
-                        <p>100</p> <!-- Change this value dynamically -->
+                        <p ID="totalCustomers">100</p> <!-- Change this value dynamically -->
                         <asp:Button ID="Button1" runat="server" CssClass="report-box-button" Text="Export to CSV" OnClick="Button1_Click" />
                     </div>
                     <div class="report-box">
                         <h3>Total Products</h3>
-                        <p>50</p> <!-- Change this value dynamically -->
+                        <p ID="totalProducts">50</p> <!-- Change this value dynamically -->
                         <asp:Button ID="Button2" runat="server" CssClass="report-box-button" Text="Export to CSV"  OnClick="Button2_Click" />
                     </div>
                     <div class="report-box">
                         <h3>Total Orders</h3>
-                        <p>200</p> <!-- Change this value dynamically -->
+                        <p ID="totalOrders">200</p> <!-- Change this value dynamically -->
                         <asp:Button ID="Button3" runat="server" CssClass="report-box-button" Text="Export to CSV" OnClick="Button3_Click" />
                     </div>
                 </div>

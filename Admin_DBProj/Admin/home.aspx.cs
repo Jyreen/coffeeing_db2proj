@@ -15,7 +15,45 @@ namespace Admin_DBProj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                SetReportValues();
+            }
+        }
 
+        protected void SetReportValues()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["YourConnectionString"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Count for Customers
+                string customerQuery = "SELECT COUNT(*) FROM Customers";
+                int customerCount = 0;
+                using (SqlCommand command = new SqlCommand(customerQuery, connection))
+                {
+                    connection.Open();
+                    customerCount = (int)command.ExecuteScalar();
+                }
+                totalCustomers.InnerText = customerCount.ToString();
+
+                // Count for Products
+                string productQuery = "SELECT COUNT(*) FROM Products";
+                int productCount = 0;
+                using (SqlCommand command = new SqlCommand(productQuery, connection))
+                {
+                    productCount = (int)command.ExecuteScalar();
+                }
+                totalProducts.InnerText = productCount.ToString();
+
+                // Count for Orders
+                string orderQuery = "SELECT COUNT(*) FROM Orders";
+                int orderCount = 0;
+                using (SqlCommand command = new SqlCommand(orderQuery, connection))
+                {
+                    orderCount = (int)command.ExecuteScalar();
+                }
+                totalOrders.InnerText = orderCount.ToString();
+            }
         }
 
         protected void ExportCSV(object sender, EventArgs e, string tableName)

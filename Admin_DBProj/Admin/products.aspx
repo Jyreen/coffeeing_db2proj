@@ -169,8 +169,8 @@
                         <asp:TextBox ID="txtPrice" runat="server" placeholder="Price"></asp:TextBox>
                         <asp:TextBox ID="txtQuantity" runat="server" placeholder="Quantity"></asp:TextBox>
                         <asp:DropDownList ID="ddlCategory" runat="server">
-                            <asp:ListItem Text="Donut" Value="Donut"></asp:ListItem>
-                            <asp:ListItem Text="Coffee" Value="Coffee"></asp:ListItem>
+                        <asp:ListItem Value="0" Text="Donut"></asp:ListItem>
+                    <asp:ListItem Value="1" Text="Coffee"></asp:ListItem>
                         </asp:DropDownList>
                         <asp:DropDownList ID="ddlStatus" runat="server">
                             <asp:ListItem Text="Available" Value="Available"></asp:ListItem>
@@ -187,12 +187,12 @@
                         <asp:TextBox ID="uPrice" runat="server" placeholder="Price"></asp:TextBox>
                         <asp:TextBox ID="uQuantity" runat="server" placeholder="Quantity"></asp:TextBox>
                         <asp:DropDownList ID="uCategory" runat="server">
-                            <asp:ListItem Text="Donut" Value="Donut"></asp:ListItem>
-                            <asp:ListItem Text="Coffee" Value="Coffee"></asp:ListItem>
+                            <asp:ListItem Text="Donut" Value="0"></asp:ListItem>
+                            <asp:ListItem Text="Coffee" Value="1"></asp:ListItem>
                         </asp:DropDownList>
                         <asp:DropDownList ID="uStatus" runat="server">
-                            <asp:ListItem Text="Available" Value="Available"></asp:ListItem>
-                            <asp:ListItem Text="Unavailable" Value="Unavailable"></asp:ListItem>
+                            <asp:ListItem Text="Available" Value="1"></asp:ListItem>
+                            <asp:ListItem Text="Unavailable" Value="0"></asp:ListItem>
                         </asp:DropDownList>
                         <asp:Button ID="btnUpdateProduct" runat="server" Text="Update Product"  CssClass="insert-product-button" OnClick="btnUpdateProduct_Click"  />
                     </asp:Panel>    
