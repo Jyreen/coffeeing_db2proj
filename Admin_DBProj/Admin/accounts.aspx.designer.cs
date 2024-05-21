@@ -114,15 +114,6 @@ namespace Admin_DBProj
         protected global::System.Web.UI.WebControls.Panel UpdatePanel;
 
         /// <summary>
-        /// getCustomerData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button getCustomerData;
-
-        /// <summary>
         /// getName control.
         /// </summary>
         /// <remarks>
@@ -130,6 +121,15 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox getName;
+
+        /// <summary>
+        /// getCustomerData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button getCustomerData;
 
         /// <summary>
         /// uFirstName control.
@@ -159,15 +159,6 @@ namespace Admin_DBProj
         protected global::System.Web.UI.WebControls.TextBox uAddress;
 
         /// <summary>
-        /// uEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox uEmail;
-
-        /// <summary>
         /// uContactNumber control.
         /// </summary>
         /// <remarks>
@@ -175,15 +166,6 @@ namespace Admin_DBProj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox uContactNumber;
-
-        /// <summary>
-        /// uPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox uPassword;
 
         /// <summary>
         /// ddlStatus control.

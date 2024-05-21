@@ -18,17 +18,22 @@ namespace Admin_DBProj
             if (!IsPostBack)
             {
                 BindGridView();
+
+                AddPanel.Visible = false;
+                UpdatePanel.Visible = false;
             }
         }
 
         protected void btnShowAddCustomer_Click(object sender, EventArgs e)
         {
             AddPanel.Visible = !AddPanel.Visible;
+            UpdatePanel.Visible = false;
         }
 
         protected void btnShowUpdateCustomer_Click(object sender, EventArgs e)
         {
             UpdatePanel.Visible = !UpdatePanel.Visible;
+            AddPanel.Visible = false;   
         }
 
         protected void btnAddCustomer_Click(object sender, EventArgs e)
@@ -118,7 +123,6 @@ namespace Admin_DBProj
                             reader.Read();
                             uFirstName.Text = reader["FIRST NAME"].ToString();
                             uLastName.Text = reader["LAST NAME"].ToString();
-                            uEmail.Text = reader["EMAIL"].ToString();
                             uAddress.Text = reader["ADDRESS"].ToString();
                             uContactNumber.Text = reader["CONTACT NUMBER"].ToString();
                         }
@@ -143,7 +147,6 @@ namespace Admin_DBProj
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@FIRSTNAME", uFirstName.Text.Trim());
                     cmd.Parameters.AddWithValue("@LASTNAME", uLastName.Text.Trim());
-                    cmd.Parameters.AddWithValue("@EMAIL", uEmail.Text.Trim());
                     cmd.Parameters.AddWithValue("@ADDRESS", uAddress.Text.Trim());
                     cmd.Parameters.AddWithValue("@CONTACTNUMBER", uContactNumber.Text.Trim());
                     cmd.Parameters.AddWithValue("@STATUS", ddlStatus.SelectedValue);
