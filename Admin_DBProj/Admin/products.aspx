@@ -67,6 +67,7 @@
             justify-content: space-between;
         }
         .product-form input[type="text"],
+        .product-form input[type="number"],
         .product-form select {
             width: 100%;
             padding: 10px;
@@ -149,12 +150,12 @@
         <div class="container">
             <div class="sidebar">
                 <ul>
-    <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
-    <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
-    <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
-    <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
-    <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Reports</span></a></li>
-</ul>
+                    <li><a href="home.aspx"><img src="../Images/icons8-home-64.png" /> <span style="font-weight: bold;">Home</span></a></li>
+                    <li><a href="orders.aspx"><img src="../Images/icons8-cart-48.png" /> <span style="font-weight: bold;">Orders</span></a></li>
+                    <li><a href="accounts.aspx"><img src="../Images/icons8-person-64.png"/> <span style="font-weight: bold;">Customers</span></a></li>
+                    <li><a href="products.aspx"><img src="../Images/icons8-cardboard-box-50.png" /> <span style="font-weight: bold;">Products</span></a></li>
+                    <li><a href="analytics.aspx"><img src="../Images/icons8-analytics-60.png" /> <span style="font-weight: bold;">Reports</span></a></li>
+                </ul>
             </div>
             <div class="content">
                 <div class="header">
@@ -166,11 +167,11 @@
                     <asp:Panel runat="server" ID="AddPanel" CssClass="add-product" Visible="false">
                         <asp:TextBox ID="txtName" runat="server" placeholder="Name"></asp:TextBox>
                         <asp:TextBox ID="txtDesc" runat="server" placeholder="Description"></asp:TextBox>
-                        <asp:TextBox ID="txtPrice" runat="server" placeholder="Price"></asp:TextBox>
-                        <asp:TextBox ID="txtQuantity" runat="server" placeholder="Quantity"></asp:TextBox>
+                        <asp:TextBox ID="txtPrice" runat="server" placeholder="Price" TextMode="Number"></asp:TextBox>
+                        <asp:TextBox ID="txtQuantity" runat="server" placeholder="Quantity" TextMode="Number"></asp:TextBox>
                         <asp:DropDownList ID="ddlCategory" runat="server">
-                        <asp:ListItem Value="0" Text="Donut"></asp:ListItem>
-                    <asp:ListItem Value="1" Text="Coffee"></asp:ListItem>
+                            <asp:ListItem Value="0" Text="Donut"></asp:ListItem>
+                            <asp:ListItem Value="1" Text="Coffee"></asp:ListItem>
                         </asp:DropDownList>
                         <asp:DropDownList ID="ddlStatus" runat="server">
                             <asp:ListItem Text="Available" Value="Available"></asp:ListItem>
@@ -184,8 +185,8 @@
                         <asp:Button ID="getProductData" runat="server" Text="Get Product"  OnClick="getProductData_Click" CssClass="insert-product-button"  />
                         <asp:TextBox ID="uName" runat="server" placeholder="Name"></asp:TextBox>
                         <asp:TextBox ID="uDesc" runat="server" placeholder="Description"></asp:TextBox>
-                        <asp:TextBox ID="uPrice" runat="server" placeholder="Price"></asp:TextBox>
-                        <asp:TextBox ID="uQuantity" runat="server" placeholder="Quantity"></asp:TextBox>
+                        <asp:TextBox ID="uPrice" runat="server" placeholder="Price" TextMode="Number"></asp:TextBox>
+                        <asp:TextBox ID="uQuantity" runat="server" placeholder="Quantity" TextMode="Number"></asp:TextBox>
                         <asp:DropDownList ID="uCategory" runat="server">
                             <asp:ListItem Text="Donut" Value="0"></asp:ListItem>
                             <asp:ListItem Text="Coffee" Value="1"></asp:ListItem>
@@ -200,13 +201,13 @@
                 <div class="product-list">
                     <h2>Product List</h2>
                     <asp:GridView ID="prod" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
-                          <Columns>
-                              <asp:BoundField DataField="PRODUCT_NAME" HeaderText="NAME" ReadOnly="True" SortExpression="PRODUCT_NAME"></asp:BoundField>
-                              <asp:BoundField DataField="PRODUCT_DESC" HeaderText="DESCRIPTION" SortExpression="PRODUCT_DESC"></asp:BoundField>
-                              <asp:BoundField DataField="PRODUCT_QUANTITY" HeaderText="QUANTITY" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
-                              <asp:BoundField DataField="PRODUCT_STATUS" HeaderText="STATUS" SortExpression="PRODUCT_STATUS"></asp:BoundField>
-                              <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
-                          </Columns>
+                        <Columns>
+                            <asp:BoundField DataField="PRODUCT_NAME" HeaderText="NAME" ReadOnly="True" SortExpression="PRODUCT_NAME"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_DESC" HeaderText="DESCRIPTION" SortExpression="PRODUCT_DESC"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_QUANTITY" HeaderText="QUANTITY" SortExpression="PRODUCT_QUANTITY"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_STATUS" HeaderText="STATUS" SortExpression="PRODUCT_STATUS"></asp:BoundField>
+                            <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="PRICE" SortExpression="PRODUCT_PRICE"></asp:BoundField>
+                        </Columns>
                     </asp:GridView>
                     <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SP_Products_GV" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                 </div>

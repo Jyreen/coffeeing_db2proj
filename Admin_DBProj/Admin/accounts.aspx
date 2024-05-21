@@ -79,6 +79,15 @@
             border-radius: 5px;
             font-size: 16px;
         }
+        .customer-form input[type="number"] {
+            width: calc(50% - 10px);
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
         .customer-form button {
             width: calc(50% - 10px);
             padding: 10px 20px;
@@ -187,8 +196,8 @@
                         <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name"></asp:TextBox>
                         <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name"></asp:TextBox>
                         <asp:TextBox ID="txtAddress" runat="server" placeholder="Address"></asp:TextBox>
-                        <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
-                        <asp:TextBox ID="txtContactNumber" runat="server" placeholder="Contact Number"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
+                        <asp:TextBox ID="txtContactNumber" runat="server" placeholder="Contact Number" TextMode="Number"></asp:TextBox>
                         <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                         <asp:Button ID="btnAddCustomer" runat="server" Text="Add Customer" OnClick="btnAddCustomer_Click" CssClass="add-customer-button"/>
                     </asp:Panel>
@@ -198,29 +207,29 @@
                         <asp:TextBox ID="uFirstName" runat="server" placeholder="First Name"></asp:TextBox>
                         <asp:TextBox ID="uLastName" runat="server" placeholder="Last Name"></asp:TextBox>
                         <asp:TextBox ID="uAddress" runat="server" placeholder="Address"></asp:TextBox>
-                        <asp:TextBox ID="uContactNumber" runat="server" placeholder="Contact Number"></asp:TextBox>
+                        <asp:TextBox ID="uContactNumber" runat="server" placeholder="Contact Number" TextMode="Number"></asp:TextBox>
                         <asp:DropDownList ID="ddlStatus" runat="server">
                             <asp:ListItem Value="1">Active</asp:ListItem>
                             <asp:ListItem Value="0">Inactive</asp:ListItem>
                         </asp:DropDownList>
                         <asp:Button ID="btnUpdateCustomer" runat="server" Text="Update Customer" CssClass="add-customer-button" OnClick="btnUpdateCustomer_Click1" />
-                    </asp:Panel>
-                </div>
-                <div class="customer-list">
-                    <h2>Customer List</h2>
-                    <asp:GridView runat="server" DataSourceID="SqlDataSource1" ID="ctl02" AutoGenerateColumns="False">
-                        <Columns>
-                            <asp:BoundField DataField="ACC_NAME" HeaderText="NAME" ReadOnly="True" SortExpression="ACC_NAME"></asp:BoundField>
-                            <asp:BoundField DataField="ACC_EMAIL" HeaderText="EMAIL" SortExpression="ACC_EMAIL"></asp:BoundField>
-                            <asp:BoundField DataField="ACC_ADDRESS" HeaderText="ADDRESS" SortExpression="ACC_ADDRESS"></asp:BoundField>
-                            <asp:BoundField DataField="ACC_PNUM" HeaderText="CONTACT NUMBER" SortExpression="ACC_PNUM"></asp:BoundField>
-                            <asp:BoundField DataField="ACC_STATUS" HeaderText="STATUS" SortExpression="ACC_STATUS"></asp:BoundField>
-                        </Columns>
-                    </asp:GridView>
+                   </asp:Panel>
+                  </div>
+                    <div class="customer-list">
+                        <h2>Customer List</h2>
+                        <asp:GridView runat="server" DataSourceID="SqlDataSource1" ID="ctl02" AutoGenerateColumns="False">
+                            <Columns>
+                                <asp:BoundField DataField="ACC_NAME" HeaderText="NAME" ReadOnly="True" SortExpression="ACC_NAME"></asp:BoundField>
+                                <asp:BoundField DataField="ACC_EMAIL" HeaderText="EMAIL" SortExpression="ACC_EMAIL"></asp:BoundField>
+                                <asp:BoundField DataField="ACC_ADDRESS" HeaderText="ADDRESS" SortExpression="ACC_ADDRESS"></asp:BoundField>
+                                <asp:BoundField DataField="ACC_PNUM" HeaderText="CONTACT NUMBER" SortExpression="ACC_PNUM"></asp:BoundField>
+                                <asp:BoundField DataField="ACC_STATUS" HeaderText="STATUS" SortExpression="ACC_STATUS"></asp:BoundField>
+                            </Columns>
+                        </asp:GridView>
                     <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SP_Customers_GV" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-                </div>
-            </div>
-        </div>
-    </form>
-</body>
+                     </div>
+                 </div>
+             </div>
+        </form>
+    </body>
 </html>
