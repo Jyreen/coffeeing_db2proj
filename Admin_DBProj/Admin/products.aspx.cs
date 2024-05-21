@@ -64,19 +64,49 @@ namespace Admin_DBProj
 
                     command.Parameters.AddWithValue("@PRODUCT_NAME", name);
                     command.Parameters.AddWithValue("@PRODUCT_DESC", description);
-                    command.Parameters.AddWithValue("@PRODUCT_PRICE", price);
-                    command.Parameters.AddWithValue("@PRODUCT_QUANTITY", quantity);
+                    decimal priceValue;
+                    if (decimal.TryParse(txtPrice.Text, out priceValue))
+                    {
+                        if (priceValue < 0)
+                        {
+                            Response.Write("<script>alert('Price cannot be negative.');</script>");
+                            return;
+                        }
+                        command.Parameters.AddWithValue("@PRODUCT_PRICE", priceValue);
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('Invalid price value.');</script>");
+                        return;
+                    }
+
+                    int quantityValue;
+                    if (int.TryParse(txtQuantity.Text, out quantityValue))
+                    {
+                        if (quantityValue < 0)
+                        {
+                            Response.Write("<script>alert('Quantity cannot be negative.');</script>");
+                            return;
+                        }
+                        command.Parameters.AddWithValue("@PRODUCT_QUANTITY", quantityValue);
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('Invalid quantity value.');</script>");
+                        return;
+                    }
+
                     command.Parameters.AddWithValue("@CATEGORY_ID", categoryId); // Pass the category ID
-                   
+
 
                     try
                     {
                         connection.Open();
                         int productId = Convert.ToInt32(command.ExecuteScalar());
 
-                      
+
                         BindGridView();
-                      
+
                         ClearInputBoxes();
 
                         Response.Write("<script>alert('Product added successfully.');</script>");
@@ -104,7 +134,7 @@ namespace Admin_DBProj
         {
             string searchText = getName.Text.Trim();
 
-   
+
             Response.Write($"You entered: {searchText}");
         }
         protected void ClearUpdateFields()
@@ -165,15 +195,20 @@ namespace Admin_DBProj
                                 Response.Write("<script>alert('Product found.');</script>");
                             }
                         }
+
+                        else
+                        {
+                            Response.Write("<script>alert('No product found.');</script>");
+                        }
                     }
                     catch (Exception ex)
                     {
                         Response.Write("<script>alert('An error occurred: " + ex.Message + "');</script>");
-
                     }
                 }
             }
         }
+
         private void BindGridView()
         {
             prod.DataBind();
@@ -196,11 +231,16 @@ namespace Admin_DBProj
                     decimal priceValue;
                     if (decimal.TryParse(uPrice.Text.Trim(), out priceValue))
                     {
+                        if (priceValue < 0)
+                        {
+                            Response.Write("<script>alert('Price cannot be negative.');</script>");
+                            return;
+                        }
                         command.Parameters.AddWithValue("@PRODUCT_PRICE", priceValue);
                     }
                     else
                     {
-                        Response.Write("Invalid price value.");
+                        Response.Write("<script>alert('Invalid price value.');</script>");
                         return;
                     }
 
@@ -208,15 +248,20 @@ namespace Admin_DBProj
                     int quantityValue;
                     if (int.TryParse(uQuantity.Text.Trim(), out quantityValue))
                     {
+                        if (quantityValue < 0)
+                        {
+                            Response.Write("<script>alert('Quantity cannot be negative.');</script>");
+                            return;
+                        }
                         command.Parameters.AddWithValue("@PRODUCT_QUANTITY", quantityValue);
                     }
                     else
                     {
-                        Response.Write("Invalid quantity value.");
+                        Response.Write("<script>alert('Invalid quantity value.');</script>");
                         return;
                     }
 
-                   
+
                     int categoryValue;
                     if (uCategory.SelectedValue == "1" || uCategory.SelectedValue == "0")
                     {

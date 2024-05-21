@@ -33,7 +33,7 @@ namespace Admin_DBProj
         protected void btnShowUpdateCustomer_Click(object sender, EventArgs e)
         {
             UpdatePanel.Visible = !UpdatePanel.Visible;
-            AddPanel.Visible = false;   
+            AddPanel.Visible = false;
         }
 
         protected void btnAddCustomer_Click(object sender, EventArgs e)
@@ -49,20 +49,37 @@ namespace Admin_DBProj
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("SP_CREATE_ACCOUNT", connection))
+                try
                 {
-                    command.CommandType = CommandType.StoredProcedure;
+                    connection.Open();
 
-                    command.Parameters.AddWithValue("@ACC_FNAME", fname);
-                    command.Parameters.AddWithValue("@ACC_LNAME", lname);
-                    command.Parameters.AddWithValue("@ACC_ADDRESS", address);
-                    command.Parameters.AddWithValue("@ACC_EMAIL", email);
-                    command.Parameters.AddWithValue("@ACC_PNUM", contactNumber);
-                    command.Parameters.AddWithValue("@ACC_PASSWORD", password);
-
-                    try
+                    // Check if the email already exists
+                    using (SqlCommand checkEmailCommand = new SqlCommand("SELECT COUNT(*) FROM ACCOUNT WHERE ACC_EMAIL = @Email", connection))
                     {
-                        connection.Open();
+                        checkEmailCommand.Parameters.AddWithValue("@Email", email);
+
+                        int count = (int)checkEmailCommand.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            string script = "<script type=\"text/javascript\">alert('Email already exists!');</script>";
+                            Response.Write(script);
+                            return;
+                        }
+                    }
+
+                    // Proceed to add the new customer
+                    using (SqlCommand command = new SqlCommand("SP_CREATE_ACCOUNT", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.AddWithValue("@ACC_FNAME", fname);
+                        command.Parameters.AddWithValue("@ACC_LNAME", lname);
+                        command.Parameters.AddWithValue("@ACC_ADDRESS", address);
+                        command.Parameters.AddWithValue("@ACC_EMAIL", email);
+                        command.Parameters.AddWithValue("@ACC_PNUM", contactNumber);
+                        command.Parameters.AddWithValue("@ACC_PASSWORD", password);
+
                         command.ExecuteNonQuery();
 
                         // Refresh the GridView after adding the customer
@@ -73,14 +90,15 @@ namespace Admin_DBProj
                         string script = "<script type=\"text/javascript\">alert('User added successfully!');</script>";
                         Response.Write(script);
                     }
-                    catch (Exception ex)
-                    {
-                        string error = "<script type=\"text/javascript\">alert('An error occurred:');</script>";
-                        Response.Write(error + ex.Message);
-                    }
+                }
+                catch (Exception ex)
+                {
+                    string error = "<script type=\"text/javascript\">alert('An error occurred: " + ex.Message + "');</script>";
+                    Response.Write(error);
                 }
             }
         }
+
         private void ClearInputBoxes()
         {
             txtFirstName.Text = "";
