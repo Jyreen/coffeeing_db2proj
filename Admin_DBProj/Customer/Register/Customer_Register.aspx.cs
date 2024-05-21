@@ -16,7 +16,6 @@ namespace Admin_DBProj.Customer.Register
         {
 
         }
-
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             string fname = txtFirstName.Text;
@@ -26,6 +25,14 @@ namespace Admin_DBProj.Customer.Register
             string contactNumber = txtContactNumber.Text;
             string password = txtPassword.Text;
             string confirmPassword = txtConfirmPassword.Text;
+
+            // Check if the password meets the minimum length requirement
+            if (password.Length < 6)
+            {
+                string script = "<script type=\"text/javascript\">alert('Password must be at least 6 characters long.');</script>";
+                Response.Write(script);
+                return;
+            }
 
             if (password != confirmPassword)
             {
@@ -57,7 +64,7 @@ namespace Admin_DBProj.Customer.Register
                         // Clear the input fields after adding the customer
                         ClearInputBoxes();
 
-                        string script = "<script type=\"text/javascript\">alert('Thank you for registering!');</script>";
+                        string script = "<script type=\"text/javascript\">alert('Registration successful. Thank you for registering!');</script>";
                         Response.Write(script);
                     }
                     catch (Exception ex)
