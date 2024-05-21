@@ -7,12 +7,12 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Security;
+using System.Configuration;
 
 namespace Admin_DBProj.Customer.Login
 {
     public partial class Customer_Login : System.Web.UI.Page
     {
-        string connectionstring = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\pc\Documents\Visual Studio 2012\Projects\coffeeing_db2proj\Admin_DBProj\App_Data\COFFEING_DB.mdf;Integrated Security=True";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,7 +23,9 @@ namespace Admin_DBProj.Customer.Login
         {
             if (!string.IsNullOrEmpty(email.Text) && !string.IsNullOrEmpty(password.Text))
             {
-                using (SqlConnection cn = new SqlConnection(connectionstring))
+                string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+                using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     cn.Open();
 
