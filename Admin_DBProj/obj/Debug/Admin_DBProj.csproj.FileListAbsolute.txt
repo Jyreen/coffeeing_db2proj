@@ -731,3 +731,7 @@ C:\Users\Ryzo\Documents\coffeeing_db2proj\Admin_DBProj\bin\Antlr3.Runtime.pdb
 C:\Users\Ryzo\Documents\coffeeing_db2proj\Admin_DBProj\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\Ryzo\Documents\coffeeing_db2proj\Admin_DBProj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Ryzo\Documents\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DB.98A433B8.Up2Date
+C:\Users\John Axel\Downloads\test\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.csproj.AssemblyReference.cache
+C:\Users\John Axel\Downloads\test\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.csproj.CoreCompileInputs.cache
+C:\Users\John Axel\Downloads\test\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.dll
+C:\Users\John Axel\Downloads\test\coffeeing_db2proj\Admin_DBProj\obj\Debug\Admin_DBProj.pdb
