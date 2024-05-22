@@ -25,23 +25,33 @@
                 <a href="#"><i class="fas fa-search"></i></a> 
                 <a href="#">Home</a>
                 <a href="Customer_Products.aspx">Shop</a> 
-                <a href="Login/Customer_Login.aspx"">Login</a>
+                <a href="Login/Customer_Login.aspx">Login</a>
                 <a href="Register/Customer_Register.aspx" class="cta-button">Join Now</a>
             </nav>
     </header>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h2 class="hero-title">COFFEING</h2> <!-- Title with creative font -->
-            <p style="font-size: 28px;">Awaken your senses</p> <!-- Larger font size -->
-            <!-- "Shop Now" button -->
-            <a href="Customer_Products.aspx" class="cta-button">Shop Now</a> <!-- "Shop Now" button -->
+            <h2 class="hero-title">COFFEING</h2>
+            <p style="font-size: 28px;">Awaken your senses</p>
+            <a href="Customer_Products.aspx" class="cta-button">Shop Now</a>
         </div>
-        <img class="active" src="../Images/3cupswbeans.jpg" alt="3cupview"/> <!-- First image -->
-        <img class="active" src="../Images/topviewmugs.jpg" alt="Coffee Making"/> <!-- Second image -->
-        <img class="active" src="../Images/topviewroasted.jpg" alt="topviewcup2"/> <!-- Second image -->
+        <img class="active" src="../Images/3cupswbeans.jpg" alt="3cupview"/>
+        <img class="active" src="../Images/topviewmugs.jpg" alt="Coffee Making"/>
+        <img class="active" src="../Images/topviewroasted.jpg" alt="topviewcup2"/>
+    </section>
 
-        <!-- Add more images for slideshow as needed -->
+    <!-- GridView for Recent Orders -->
+    <section class="recent-orders">
+        <h2>Recent Orders</h2>
+        <asp:GridView ID="gvRecentOrders" runat="server" AutoGenerateColumns="False" CssClass="table table-striped">
+            <Columns>
+                <asp:BoundField DataField="PRODUCT_NAME" HeaderText="Product Name" />
+                <asp:BoundField DataField="PRODUCT_PRICE" HeaderText="Product Price" />
+                <asp:BoundField DataField="ORDER_DETAILS_QUANTITY" HeaderText="Quantity" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SP_RECENTORDERS_USER" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
     </section>
     </form>
     <script src="js/main.js"></script>
