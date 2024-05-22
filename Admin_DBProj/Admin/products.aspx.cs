@@ -105,7 +105,7 @@ namespace Admin_DBProj
             string searchText = getName.Text.Trim();
 
    
-            Response.Write($"You entered: {searchText}");
+            Response.Write("You entered: {searchText}");
         }
         protected void ClearUpdateFields()
         {

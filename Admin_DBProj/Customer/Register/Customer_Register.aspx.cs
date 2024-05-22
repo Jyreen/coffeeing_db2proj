@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text.RegularExpressions;
 
 namespace Admin_DBProj.Customer.Register
 {
@@ -37,6 +38,15 @@ namespace Admin_DBProj.Customer.Register
             if (password != confirmPassword)
             {
                 string script = "<script type=\"text/javascript\">alert('Passwords do not match.');</script>";
+                Response.Write(script);
+                return;
+            }
+
+            // Validate the contact number pattern
+            string contactPattern = @"^[0-9]{11}$";
+            if (!Regex.IsMatch(contactNumber, contactPattern))
+            {
+                string script = "<script type=\"text/javascript\">alert('Contact number must be exactly 11 digits.');</script>";
                 Response.Write(script);
                 return;
             }
