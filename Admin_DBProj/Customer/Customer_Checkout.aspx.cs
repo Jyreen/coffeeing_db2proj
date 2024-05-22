@@ -76,7 +76,7 @@ namespace Admin_DBProj.Customer
         }
 
         protected void ConfirmOrder(object sender, EventArgs e)
-        {
+        {   
             // Retrieve account ID from session or authentication context
             if (Session["AccountID"] == null)
             {
@@ -128,7 +128,7 @@ namespace Admin_DBProj.Customer
                 {
                     // Insert into ORDER table
                     int newOrderID;
-                    using (SqlCommand cmd = new SqlCommand("InsertOrder", cn, transaction))
+                    using (SqlCommand cmd = new SqlCommand("SP_InsertOrder", cn, transaction))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@OrderDate", orderDate);
@@ -144,7 +144,7 @@ namespace Admin_DBProj.Customer
                             Direction = ParameterDirection.Output
                         };
                         cmd.Parameters.Add(outputIdParam);
-
+w3
                         cmd.ExecuteNonQuery();
 
                         newOrderID = (int)outputIdParam.Value;
@@ -153,7 +153,7 @@ namespace Admin_DBProj.Customer
                     // Insert into ORDER_DETAILS table
                     foreach (var item in cartItems)
                     {
-                        using (SqlCommand cmd = new SqlCommand("InsertOrderDetails", cn, transaction))
+                        using (SqlCommand cmd = new SqlCommand("SP_InsertOrderDetails", cn, transaction))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
                             cmd.Parameters.AddWithValue("@ProductID", item.ProductID);
